@@ -1,0 +1,20 @@
+#header-wrapper {
+    padding: 0;
+}
+
+#header-wrapper > .row {
+    margin: 0;
+}
+
+#header {
+    text-align: center;
+}
+
+#tab-bar {
+    width: 100%;
+    border: 2px solid black;
+}
+
+#tab-bar > div {
+    text-align: center;
+}
