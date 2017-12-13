@@ -7,18 +7,18 @@
         </span>
     </div>
     <div class="row" id="tab-bar">
-        <div class="col-lg-4 col-md-4">
-            <a routerLink="/home" routerLinkActive="active">
+        <div class="col-lg-4 col-md-4" [ngClass]="getHighlightClass(0)">
+            <a routerLink="/home" routerLinkActive="active" (click)="setCurrTab(0)">
                 Home
             </a>
         </div>
-        <div class="col-lg-4 col-md-4">
-            <a routerLink="/about" routerLinkActive="active">
+        <div class="col-lg-4 col-md-4" [ngClass]="getHighlightClass(1)">
+            <a routerLink="/about" routerLinkActive="active" (click)="setCurrTab(1)">
                 About
             </a>
         </div>
-        <div class="col-lg-4 col-md-4">
-            <a routerLink="/projects" routerLinkActive="active">
+        <div class="col-lg-4 col-md-4" [ngClass]="getHighlightClass(2)">
+            <a routerLink="/projects" routerLinkActive="active" (click)="setCurrTab(2)">
                 Projects
             </a>
         </div>

@@ -12,9 +12,28 @@
 
 #tab-bar {
     width: 100%;
-    border: 2px solid black;
 }
 
 #tab-bar > div {
     text-align: center;
+}
+
+#tab-bar a {
+    font-size: 1.4em;
+    color: black;
+    text-decoration: none;
+}
+
+#tab-bar a:hover {
+     color: grey; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+
+.selected {
+    border-bottom: 4px solid #0f88eb;
+}
+
+.not-selected {
+    border-bottom: 4px solid #e0e0e0;
 }
