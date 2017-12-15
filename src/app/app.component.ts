@@ -45,11 +45,5 @@ export class AppComponent {
                 }
             }
         }
-        if (input === this.currTab) {
-            return 'selected';
-        }
-        else {
-            return 'not-selected';
-        }
     }
 }
