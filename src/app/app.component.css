@@ -21,6 +21,7 @@
 #tab-bar a {
     font-size: 1.4em;
     text-decoration: none;
+    color: inherit;
 }
 
 #tab-bar a:hover {
@@ -30,11 +31,11 @@
 }
 
 .selected {
-    color: black;
+    color: black !important;
     border-bottom: 4px solid #0f88eb;
 }
 
 .not-selected {
-    color: grey; 
+    color: grey !important; 
     border-bottom: 4px solid #e0e0e0;
 }
