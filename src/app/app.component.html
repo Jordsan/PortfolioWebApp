@@ -2,24 +2,31 @@
     <div class="row" id="header">
         <span class="col-lg-12">
             <h1>
-                Hello, I am Jordan Michaels
+                Hello!<br><br>
+                My name is Jordan Michaels
             </h1>
         </span>
     </div>
     <div class="row" id="tab-bar">
         <div class="col-lg-4 col-md-4" [ngClass]="getHighlightClass(0)">
-            <a routerLink="/home" routerLinkActive="active" (click)="setCurrTab(0)">
-                Home
+            <a routerLink="/home" routerLinkActive="active">
+                <button class="tab-button" (click)="setCurrTab(0)">
+                    Home
+                </button>
             </a>
         </div>
         <div class="col-lg-4 col-md-4" [ngClass]="getHighlightClass(1)">
-            <a routerLink="/about" routerLinkActive="active" (click)="setCurrTab(1)">
-                About
+            <a routerLink="/about" routerLinkActive="active">
+                <button class="tab-button" (click)="setCurrTab(1)">
+                    About
+                </button>
             </a>
         </div>
         <div class="col-lg-4 col-md-4" [ngClass]="getHighlightClass(2)">
-            <a routerLink="/projects" routerLinkActive="active" (click)="setCurrTab(2)">
-                Projects
+            <a routerLink="/projects" routerLinkActive="active">
+                <button class="tab-button" (click)="setCurrTab(2)">
+                    Projects
+                </button>
             </a>
         </div>
     </div>

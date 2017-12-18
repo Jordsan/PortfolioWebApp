@@ -8,6 +8,13 @@
 
 #header {
     text-align: center;
+    height: 200px;
+    font-family: "Courier New", sans-serif, monospace;
+}
+
+#header h1 {
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 #tab-bar {
@@ -16,6 +23,7 @@
 
 #tab-bar > div {
     text-align: center;
+    padding: 0;
 }
 
 #tab-bar a {
@@ -28,11 +36,26 @@
      color: black; 
      text-decoration:none; 
      cursor:pointer;  
+     background: #fcfcfc;
+}
+
+.tab-button {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: "Courier New", sans-serif, monospace;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+.tab-button:focus {
+    outline: 0;
 }
 
 .selected {
     color: black !important;
-    border-bottom: 4px solid #0f88eb;
+    border-bottom: 4px solid #007bff;;
 }
 
 .not-selected {
