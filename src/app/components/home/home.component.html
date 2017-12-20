@@ -18,31 +18,31 @@
     </div>
     <div class="row section" id="personal-info">
         <div id="home-hover" class="col-lg-2 col-lg-offset-1" (mouseenter)="hoverHome()" (mouseleave)="hoverHome()">
-            <span class="material-icons info-icon" [ngClass]="isHovered('home')">home</span>
+            <span class="material-icons info-icon" [ngClass]="isHovered('home')" [@hoverIcon]="isHovered('home')">home</span>
             <div *ngIf="hoverHomeVal" class="hover-item" [@slideIn]="'in'">
                 438 Penfield Road, Fairfield, CT, 06824
             </div>
         </div>
         <div id="phone-hover" class="col-lg-2" (mouseenter)="hoverPhone()" (mouseleave)="hoverPhone()">
-            <span class="material-icons info-icon" [ngClass]="isHovered('phone')">phone</span>
+            <span class="material-icons info-icon" [ngClass]="isHovered('phone')" [@hoverIcon]="isHovered('phone')">phone</span>
             <div *ngIf="hoverPhoneVal" class="hover-item" [@slideIn]="'in'">
                 203-727-3656
             </div>
         </div>
         <div id="email-hover" class="col-lg-2" (mouseenter)="hoverEmail()" (mouseleave)="hoverEmail()">
-            <span class="material-icons info-icon" [ngClass]="isHovered('email')">email</span>
+            <span class="material-icons info-icon" [ngClass]="isHovered('email')" [@hoverIcon]="isHovered('email')">email</span>
             <div *ngIf="hoverEmailVal" class="hover-item" [@slideIn]="'in'">
                 <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels</a>
             </div>
         </div>
         <div id="linkedin-hover" class="col-lg-2" (mouseenter)="hoverLinkedIn()" (mouseleave)="hoverLinkedIn()">
-            <span class="fa fa-linkedin-square info-icon" [ngClass]="isHovered('linkedin')"></span>
+            <span class="fa fa-linkedin-square info-icon" [ngClass]="isHovered('linkedin')" [@hoverIcon]="isHovered('linkedin')"></span>
             <div *ngIf="hoverLinkedInVal" class="hover-item" [@slideIn]="'in'">
                 <a href="https://www.linkedin.com/in/jordan-michaels-589385149/">Jordan Michaels</a>
             </div>
         </div>
         <div id="github-hover" class="col-lg-2" (mouseenter)="hoverGithub()" (mouseleave)="hoverGithub()">
-            <span class="fa fa-github info-icon" [ngClass]="isHovered('github')"></span>
+            <span class="fa fa-github info-icon" [ngClass]="isHovered('github')" [@hoverIcon]="isHovered('github')"></span>
             <div *ngIf="hoverGithubVal" class="hover-item" [@slideIn]="'in'">
                 <a href="https://github.com/Jordsan">Jordsan</a>
             </div>

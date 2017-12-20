@@ -79,10 +79,11 @@
 .hover-item {
     position: absolute;
     text-align: center;
-    max-width: 202px;
+    max-width: 215px;
+    min-height: 44px;
     margin-left: 90px;
     padding-right: 12px;
-    padding-left: 20px;
+    padding-left: 30px;
     border-right: 2px solid #007bff;
     border-bottom: 2px solid #007bff;
     border-top: 2px solid #007bff;
@@ -93,7 +94,7 @@
 }
 
 .icon-hovered {
-    background: #f1f1f1; 
+    background: #f8f8f8; 
 }
 
 .icon-not-hovered {
@@ -106,7 +107,7 @@
 
 #home-hover div{
     z-index: 13;
-    width: 202px;
+    width: 215px;
 }
 
 #phone-hover span{
@@ -115,7 +116,7 @@
 
 #phone-hover div{
     z-index: 10;
-    width: 140px;
+    width: 150px;
 }
 
 #email-hover span{

@@ -21,6 +21,16 @@ import {
             transition('* => void', [
                 animate(250, style({ transform: 'translateX(-100%)' }))
             ])
+        ]),
+        trigger('hoverIcon', [
+            state('icon-hovered', style({
+                transform: 'scale(1.3)'
+            })),
+            state('icon-not-hovered', style({
+                transform: 'scale(1)'
+            })),
+            transition('icon-not-hovered => icon-hovered', animate('250ms ease-in')),
+            transition('icon-hovered => icon-not-hovered', animate('250ms ease-out'))
         ])
     ]
 })
