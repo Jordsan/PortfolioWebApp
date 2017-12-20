@@ -21,6 +21,38 @@
     font-size: 1.2em;
 }
 
+#cover {
+    width: 100%;
+}
+
+#cover div {
+    text-align: right;
+    position: absolute;
+    margin-top: 60px;
+    background: white;
+    height: 100px;
+}
+
+#home-cover {
+    z-index: 14;
+}
+
+#phone-cover {
+    z-index: 11;
+}
+
+#email-cover {
+    z-index: 8;
+}
+
+#linkedin-cover {
+    z-index: 5;
+}
+
+#github-cover {
+    z-index: 2;
+}
+
 #personal-info div {
     display: flex;
     justify-content: flex-start;
@@ -43,16 +75,67 @@
 .hover-item {
     position: absolute;
     text-align: center;
-    width: 200px;
+    max-width: 202px;
     margin-left: 90px;
+    padding-right: 12px;
+    padding-left: 20px;
     border-right: 2px solid #007bff;
     border-bottom: 2px solid #007bff;
     border-top: 2px solid #007bff;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     background: white;
-    z-index: -1;
     
+}
+
+.icon-hovered {
+    background: #f1f1f1; 
+}
+
+.icon-not-hovered {
+    background: white;
+}
+
+#home-hover span{
+    z-index: 15;
+}
+
+#home-hover div{
+    z-index: 13;
+    width: 202px;
+}
+
+#phone-hover span{
+    z-index: 12;
+}
+
+#phone-hover div{
+    z-index: 10;
+    width: 140px;
+}
+
+#email-hover span{
+    z-index: 9;
+}
+
+#email-hover div{
+    z-index: 7;
+}
+
+#linkedin-hover span{
+    z-index: 6;
+}
+
+#linkedin-hover div{
+    z-index: 4;
+}
+
+#github-hover span{
+    z-index: 3;
+}
+
+#github-hover div{
+    z-index: 1;
 }
 
 #skill-header div {
@@ -64,6 +147,6 @@
 }
 
 #skill-content ul, li {
-    padding: 0;
+    padding: 0 0 4px 0;
     list-style-type: none;
 }

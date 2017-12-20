@@ -1,35 +1,55 @@
-<div class="row section" id="personal-info">
-    <div class="col-lg-2 col-lg-offset-1" (mouseenter)="hoverHome()" (mouseleave)="hoverHome()">
-        <span class="material-icons info-icon">home</span>
-        <div *ngIf="hoverHomeVal" class="hover-item">
-            438 Penfield Road, Fairfield, CT, 06824
+<div>
+    <div class="row" id="cover">
+        <div id="home-cover" class="col-lg-2">
+            
+        </div>
+        <div id="phone-cover" class="col-lg-2 col-lg-offset-2">
+            
+        </div>
+        <div id="email-cover" class="col-lg-2 col-lg-offset-4">
+            
+        </div>
+        <div id="linkedin-cover" class="col-lg-2 col-lg-offset-6">
+            
+        </div>
+        <div id="github-cover" class="col-lg-2 col-lg-offset-8">
+            
         </div>
     </div>
-    <div class="col-lg-2" (mouseenter)="hoverPhone()" (mouseleave)="hoverPhone()">
-        <span class="material-icons info-icon">phone</span>
-        <div *ngIf="hoverPhoneVal" class="hover-item">
-            203-727-3656
+    <div class="row section" id="personal-info">
+        <div id="home-hover" class="col-lg-2 col-lg-offset-1" (mouseenter)="hoverHome()" (mouseleave)="hoverHome()">
+            <span class="material-icons info-icon" [ngClass]="isHovered('home')">home</span>
+            <div *ngIf="hoverHomeVal" class="hover-item" [@slideIn]="'in'">
+                438 Penfield Road, Fairfield, CT, 06824
+            </div>
         </div>
-    </div>
-    <div class="col-lg-2" (mouseenter)="hoverEmail()" (mouseleave)="hoverEmail()">
-        <span class="material-icons info-icon">email</span>
-        <div *ngIf="hoverEmailVal" class="hover-item">
-            x
+        <div id="phone-hover" class="col-lg-2" (mouseenter)="hoverPhone()" (mouseleave)="hoverPhone()">
+            <span class="material-icons info-icon" [ngClass]="isHovered('phone')">phone</span>
+            <div *ngIf="hoverPhoneVal" class="hover-item" [@slideIn]="'in'">
+                203-727-3656
+            </div>
         </div>
-    </div>
-    <div class="col-lg-2" (mouseenter)="hoverLinkedIn()" (mouseleave)="hoverLinkedIn()">
-        <span class="fa fa-linkedin-square info-icon"></span>
-        <div *ngIf="hoverLinkedInVal" class="hover-item">
-            <a href="https://www.linkedin.com/in/jordan-michaels-589385149/">Jordan Michaels</a>
+        <div id="email-hover" class="col-lg-2" (mouseenter)="hoverEmail()" (mouseleave)="hoverEmail()">
+            <span class="material-icons info-icon" [ngClass]="isHovered('email')">email</span>
+            <div *ngIf="hoverEmailVal" class="hover-item" [@slideIn]="'in'">
+                <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels</a>
+            </div>
         </div>
-    </div>
-    <div class="col-lg-2" (mouseenter)="hoverGithub()" (mouseleave)="hoverGithub()">
-        <span class="fa fa-github info-icon"></span>
-        <div *ngIf="hoverGithubVal" class="hover-item">
-            x
+        <div id="linkedin-hover" class="col-lg-2" (mouseenter)="hoverLinkedIn()" (mouseleave)="hoverLinkedIn()">
+            <span class="fa fa-linkedin-square info-icon" [ngClass]="isHovered('linkedin')"></span>
+            <div *ngIf="hoverLinkedInVal" class="hover-item" [@slideIn]="'in'">
+                <a href="https://www.linkedin.com/in/jordan-michaels-589385149/">Jordan Michaels</a>
+            </div>
+        </div>
+        <div id="github-hover" class="col-lg-2" (mouseenter)="hoverGithub()" (mouseleave)="hoverGithub()">
+            <span class="fa fa-github info-icon" [ngClass]="isHovered('github')"></span>
+            <div *ngIf="hoverGithubVal" class="hover-item" [@slideIn]="'in'">
+                <a href="https://github.com/Jordsan">Jordsan</a>
+            </div>
         </div>
     </div>
 </div>
+
 <div class="row section">
     <div class="col-lg-4 section-title">
         background
@@ -49,7 +69,7 @@
         Education
     </div>
     <div class="col-lg-6 section-content">
-        University of Delaware - Class of 2018
+        <b>University of Delaware - Class of 2018</b>
         <br> Bachelor of Science in Computer Information Systems
     </div>
 </div>
@@ -79,23 +99,55 @@
                     <li>Javascript</li>
                     <li>Typescript</li>
                     <li>HTML</li>
+                    <li>CSS & SCSS</li>
+                    <li>Python</li>
+                    <li>C & C++</li>
+                    <li>PHP</li>
+                    <li>MySQL & Oracle</li>
+                    <li>ARM Assembly</li>
                 </ul>
             </div>
             <div class="col-lg-3">
                 <ul>
-                    <li></li>
+                    <li>Angular</li>
+                    <li>Ionic</li>
+                    <li>Spring Boot</li>
+                    <li>Spring MVC</li>
+                    <li>Jersey</li>
+                    <li>JUnit & Mockito</li>
+                    <li>Jasmine</li>
                 </ul>
             </div>
             <div class="col-lg-3">
                 <ul>
-                    <li></li>
+                    <li>Apache Kafka</li>
+                    <li>jQuery</li>
+                    <li>Bootstrap</li>
+                    <li>Mongoose</li>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
                 </ul>
             </div>
             <div class="col-lg-3">
                 <ul>
-                    <li></li>
+                    <li>Git</li>
+                    <li>Firebase</li>
+                    <li>Cloud Foundry</li>
+                    <li>MongoDB</li>
+                    <li>Maven</li>
+                    <li>UML</li>
+                    <li>BPMN</li>
+                    <li>Microsoft Office</li>
                 </ul>
             </div>
         </div>
+    </div>
+</div>
+<div class="row section">
+    <div class="col-lg-4 section-title">
+        Experience
+    </div>
+    <div class="col-lg-6 section-content">
+        asdf
     </div>
 </div>
