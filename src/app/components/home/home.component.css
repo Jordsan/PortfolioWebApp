@@ -1,7 +1,7 @@
 
 .section {
     text-align: center;
-    margin: 50px 0px 50px 0px;
+    margin: 75px 0px 75px 0px;
     font-family: "Courier New", sans-serif, monospace;
 }
 
@@ -19,4 +19,51 @@
 .section-content {
     text-align: left;
     font-size: 1.2em;
+}
+
+#personal-info div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.info-icon {
+    position: relative;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    margin-left: 40px;
+    font-size: 2.5em;
+    border: 3px solid #007bff;
+    border-radius: 50%;
+    background: white;
+}
+
+.hover-item {
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    margin-left: 90px;
+    border-right: 2px solid #007bff;
+    border-bottom: 2px solid #007bff;
+    border-top: 2px solid #007bff;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: white;
+    z-index: -1;
+    
+}
+
+#skill-header div {
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-bottom: 6px;
+    border-bottom: 4px double #007bff;
+}
+
+#skill-content ul, li {
+    padding: 0;
+    list-style-type: none;
 }

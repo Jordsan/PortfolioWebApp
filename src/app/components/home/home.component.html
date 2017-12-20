@@ -1,15 +1,47 @@
+<div class="row section" id="personal-info">
+    <div class="col-lg-2 col-lg-offset-1" (mouseenter)="hoverHome()" (mouseleave)="hoverHome()">
+        <span class="material-icons info-icon">home</span>
+        <div *ngIf="hoverHomeVal" class="hover-item">
+            438 Penfield Road, Fairfield, CT, 06824
+        </div>
+    </div>
+    <div class="col-lg-2" (mouseenter)="hoverPhone()" (mouseleave)="hoverPhone()">
+        <span class="material-icons info-icon">phone</span>
+        <div *ngIf="hoverPhoneVal" class="hover-item">
+            203-727-3656
+        </div>
+    </div>
+    <div class="col-lg-2" (mouseenter)="hoverEmail()" (mouseleave)="hoverEmail()">
+        <span class="material-icons info-icon">email</span>
+        <div *ngIf="hoverEmailVal" class="hover-item">
+            x
+        </div>
+    </div>
+    <div class="col-lg-2" (mouseenter)="hoverLinkedIn()" (mouseleave)="hoverLinkedIn()">
+        <span class="fa fa-linkedin-square info-icon"></span>
+        <div *ngIf="hoverLinkedInVal" class="hover-item">
+            <a href="https://www.linkedin.com/in/jordan-michaels-589385149/">Jordan Michaels</a>
+        </div>
+    </div>
+    <div class="col-lg-2" (mouseenter)="hoverGithub()" (mouseleave)="hoverGithub()">
+        <span class="fa fa-github info-icon"></span>
+        <div *ngIf="hoverGithubVal" class="hover-item">
+            x
+        </div>
+    </div>
+</div>
 <div class="row section">
     <div class="col-lg-4 section-title">
         background
     </div>
     <div class="col-lg-6 section-content">
-        I am a full-stack software developer with a passion to continually learn. 
-        Currently I am attending The University of Delaware and majoring in Computer Information Systems with an expected graduation date of May 2018.
+        I am a full-stack software developer with a passion for continually learning. Currently I am majoring in Computer Information
+        Systems at The University of Delaware with an expected graduation date of May 2018.
         <br>
         <br> With experience in both front-end and back-end development, I am comfortable working around the full stack. I always
         have an open mind to learning to work with new technologies and development environments, and enjoy taking on new
         challenges head-on. As an extremely detail oriented thinker, my goal in projects is always to create a product that
-        is efficient, organized, and scalable in the future.
+        is efficient, organized, and scalable.
     </div>
 </div>
 <div class="row section">
@@ -18,5 +50,52 @@
     </div>
     <div class="col-lg-6 section-content">
         University of Delaware - Class of 2018
+        <br> Bachelor of Science in Computer Information Systems
+    </div>
+</div>
+<div class="row section">
+    <div class="col-lg-4 section-title">
+        Skills
+    </div>
+    <div class="col-lg-6 section-content">
+        <div class="row" id="skill-header">
+            <div class="col-lg-3">
+                Languages
+            </div>
+            <div class="col-lg-3">
+                Frameworks
+            </div>
+            <div class="col-lg-3">
+                Libraries
+            </div>
+            <div class="col-lg-3">
+                Tools
+            </div>
+        </div>
+        <div class="row" id="skill-content">
+            <div class="col-lg-3">
+                <ul>
+                    <li>Java</li>
+                    <li>Javascript</li>
+                    <li>Typescript</li>
+                    <li>HTML</li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
