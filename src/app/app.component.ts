@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-root',
@@ -8,42 +7,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-    currTab;
-
-    constructor(private router: Router) {
+    constructor() {
 
     }
 
-    setCurrTab(input: number): void {
-        this.currTab = input;
-    }
-
-    getHighlightClass(input: number): string {
-        switch (input) {
-            case 0: {
-                if (this.router.url.includes('home')) {
-                    return 'selected';
-                }
-                else {
-                    return 'not-selected';
-                }
-            }
-            case 1: {
-                if (this.router.url.includes('about')) {
-                    return 'selected';
-                }
-                else {
-                    return 'not-selected';
-                }
-            }
-            case 2: {
-                if (this.router.url.includes('projects')) {
-                    return 'selected';
-                }
-                else {
-                    return 'not-selected';
-                }
-            }
-        }
-    }
 }
