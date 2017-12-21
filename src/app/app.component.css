@@ -9,7 +9,8 @@
 #header {
     text-align: center;
     height: 175px;
-    font-family: "Courier New", sans-serif, monospace;
+    /* font-family: "Courier New", sans-serif, monospace; */
+    font-family: Apercu,Source Sans Pro,Helvetica,Arial,sans-serif;
 }
 
 #header h1 {
@@ -43,7 +44,8 @@
     height: 50px;
     border: none;
     background: transparent;
-    font-family: "Courier New", sans-serif, monospace;
+    /* font-family: "Courier New", sans-serif, monospace; */
+    font-family: Apercu,Source Sans Pro,Helvetica,Arial,sans-serif;
     font-weight: 600;
     font-size: 1.2em;
     letter-spacing: 2px;
