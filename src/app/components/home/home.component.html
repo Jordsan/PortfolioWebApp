@@ -16,7 +16,7 @@
 
         </div>
     </div>
-    <div class="row section" id="personal-info">
+    <div class="row" id="personal-info">
         <div id="home-hover" class="col-lg-2 col-lg-offset-1" (mouseenter)="hoverHome()" (mouseleave)="hoverHome()">
             <span class="material-icons info-icon" [ngClass]="isHovered('home')" [@hoverIcon]="isHovered('home')">home</span>
             <div *ngIf="hoverHomeVal" class="hover-item" [@slideIn]="'in'">
@@ -58,11 +58,11 @@
     </div>
 </div>
 
-<div class="row section">
+<div class="row section" id="background">
     <div class="col-lg-4 section-title">
         background
     </div>
-    <div class="col-lg-6 section-content">
+    <div class="col-lg-6 section-content" id="background-content">
         I am a full-stack software developer with a passion for continually learning. Currently I am majoring in Computer Information
         Systems at The University of Delaware with an expected graduation date of May 2018.
         <br>
@@ -70,15 +70,6 @@
         have an open mind to learning to work with new technologies and development environments, and enjoy taking on new
         challenges head-on. As an extremely detail oriented thinker, my goal in projects is always to create a product that
         is efficient, organized, and scalable.
-    </div>
-</div>
-<div class="row section">
-    <div class="col-lg-4 section-title">
-        Education
-    </div>
-    <div class="col-lg-6 section-content">
-        <b>University of Delaware - Class of 2018</b>
-        <br> Bachelor of Science in Computer Information Systems
     </div>
 </div>
 <div class="row section">
@@ -153,7 +144,45 @@
 </div>
 <div class="row section">
     <div class="col-lg-4 section-title">
+        Education
+    </div>
+    <div class="col-lg-6 section-content" id="education-content">
+        <b>University of Delaware - Class of 2018</b>
+        <br>
+        <span>Bachelor of Science in Computer Information Systems</span>
+    </div>
+</div>
+<div class="row section">
+    <div class="col-lg-4 section-title">
         Experience
+    </div>
+    <div class="col-lg-6 section-content">
+        <div class="row">
+            <div class="col-lg-6 experience-content">
+                <b>JPMorgan Chase & Co.</b>
+                <br>
+                <span>Technology Analyst Intern</span>
+            </div>
+            <div class="col-lg-6 experience-date">
+                June 2017 - Dec 2017
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 experience-content">
+                <b>GBG, The Corporate Gift Source, Inc.</b>
+                <br>
+                <span>Sales & Marketing Associate</span>
+            </div>
+            <div class="col-lg-6 experience-date">
+                June 2014 - Aug 2016
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row section">
+    <div class="col-lg-4 section-title">
+        Projects
     </div>
     <div class="col-lg-6 section-content">
         asdf
