@@ -2,8 +2,7 @@
 .section {
     text-align: center;
     margin: 150px 0px 50px 0px;
-    /* font-family: "Courier New", sans-serif, monospace; */
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .section-title {
@@ -84,17 +83,18 @@
     position: absolute;
     left: 0;
     right: 0;
-    margin-left: 50%;
-    text-align: center;
-    min-height: 44px;
-    padding-left: 35px;
     border-right: 2px solid #007bff;
     border-bottom: 2px solid #007bff;
     border-top: 2px solid #007bff;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     background: white;
-    font-family: "Courier New", sans-serif, monospace;    
+    margin-left: 50%;
+    text-align: center;
+    min-height: 44px;
+    padding-left: 35px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;  
 }
 
 .icon-hovered {
@@ -113,7 +113,7 @@
 
 #home-hover div{
     z-index: 13;
-    width: 245px;
+    width: 190px;
 }
 
 #phone-hover span{
@@ -122,7 +122,7 @@
 
 #phone-hover div{
     z-index: 10;
-    width: 175px;
+    width: 150px;
 }
 
 #email-hover span{
@@ -131,7 +131,7 @@
 
 #email-hover div{
     z-index: 7;
-    width: 245px;
+    width: 260px;
 }
 
 #linkedin-hover span{
@@ -140,7 +140,7 @@
 
 #linkedin-hover div{
     z-index: 4;
-    width: 200px;
+    width: 160px;
 }
 
 #github-hover span{
@@ -149,7 +149,7 @@
 
 #github-hover div{
     z-index: 1;
-    width: 135px;
+    width: 110px;
 }
 
 #background-content {
@@ -188,8 +188,10 @@
 }
 
 .experience-date {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 23px;
     color: #555555;
-    text-align: right;
     font-size: .95em;
-    font-family: "Courier New", sans-serif, monospace;
-}
+    font-family: 'Roboto Condensed', sans-serif;}
