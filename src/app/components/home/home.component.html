@@ -1,26 +1,11 @@
 <div>
-    <div class="row" id="cover">
-        <div id="home-cover" class="col-lg-2">
-
-        </div>
-        <div id="phone-cover" class="col-lg-2 col-lg-offset-2">
-
-        </div>
-        <div id="email-cover" class="col-lg-2 col-lg-offset-4">
-
-        </div>
-        <div id="linkedin-cover" class="col-lg-2 col-lg-offset-6">
-
-        </div>
-        <div id="github-cover" class="col-lg-2 col-lg-offset-8">
-
-        </div>
-    </div>
     <div class="row" id="personal-info">
-        <div id="home-hover" class="col-lg-2 col-lg-offset-1" (mouseenter)="hoverHome()" (mouseleave)="hoverHome()">
-            <span class="material-icons info-icon" [ngClass]="isHovered('home')" [@hoverIcon]="isHovered('home')">home</span>
-            <div *ngIf="hoverHomeVal" class="hover-item" [@slideIn]="'in'">
-                <!-- <div class="hover-item" [@slideIn]="'in'"> -->
+        <div id="home-hover" class="col-lg-2" (mouseenter)="hoverHome()" (mouseleave)="hoverHome()">
+            <div class="hover-wrapper" [ngClass]="isHovered('home')" [@hoverIcon]="isHovered('home')">
+                <span class="material-icons info-icon">home</span>
+
+            </div>
+            <div *ngIf="hoverHomeVal" class="hover-item" [@fadeIn]="'in'">
                 <!-- <a href="https://goo.gl/maps/XAC99K2tJ1v">
                     438 Penfield Road, Fairfield, CT, 06824
                 </a> -->
@@ -28,33 +13,46 @@
             </div>
         </div>
         <div id="phone-hover" class="col-lg-2" (mouseenter)="hoverPhone()" (mouseleave)="hoverPhone()">
-            <span class="material-icons info-icon" [ngClass]="isHovered('phone')" [@hoverIcon]="isHovered('phone')">phone</span>
-            <div *ngIf="hoverPhoneVal" class="hover-item" [@slideIn]="'in'">
-                <!-- <div class="hover-item" [@slideIn]="'in'"> -->
+            <div class="hover-wrapper" [ngClass]="isHovered('phone')" [@hoverIcon]="isHovered('phone')">
+                <span class="material-icons info-icon">phone</span>
+            </div>
+            <div *ngIf="hoverPhoneVal" class="hover-item" [@fadeIn]="'in'">
                 203-727-3656
             </div>
         </div>
         <div id="email-hover" class="col-lg-2" (mouseenter)="hoverEmail()" (mouseleave)="hoverEmail()">
-            <span class="material-icons info-icon" [ngClass]="isHovered('email')" [@hoverIcon]="isHovered('email')">email</span>
-            <div *ngIf="hoverEmailVal" class="hover-item" [@slideIn]="'in'">
-                <!-- <div class="hover-item" [@slideIn]="'in'"> -->
+            <div class="hover-wrapper" [ngClass]="isHovered('email')" [@hoverIcon]="isHovered('email')">
+                <span class="material-icons info-icon">email</span>
+            </div>
+            <div *ngIf="hoverEmailVal" class="hover-item" [@fadeIn]="'in'">
                 <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels@gmail.com</a>
             </div>
         </div>
+        <div id="resume-hover" class="col-lg-2" (mouseenter)="hoverResume()" (mouseleave)="hoverResume()">
+            <div class="hover-wrapper" [ngClass]="isHovered('resume')" [@hoverIcon]="isHovered('resume')">
+                <span class="fa fa-file-text-o info-icon"></span>
+            </div>
+            <div *ngIf="hoverResumeVal" class="hover-item" [@fadeIn]="'in'">
+                resume
+            </div>
+        </div>
         <div id="linkedin-hover" class="col-lg-2" (mouseenter)="hoverLinkedIn()" (mouseleave)="hoverLinkedIn()">
-            <span class="fa fa-linkedin-square info-icon" [ngClass]="isHovered('linkedin')" [@hoverIcon]="isHovered('linkedin')"></span>
-            <div *ngIf="hoverLinkedInVal" class="hover-item" [@slideIn]="'in'">
-                <!-- <div class="hover-item" [@slideIn]="'in'"> -->
+            <div class="hover-wrapper" [ngClass]="isHovered('linkedin')" [@hoverIcon]="isHovered('linkedin')">
+                <span class="fa fa-linkedin-square info-icon"></span>
+            </div>
+            <div *ngIf="hoverLinkedInVal" class="hover-item" [@fadeIn]="'in'">
                 <a href="https://www.linkedin.com/in/jordan-michaels-589385149/">Jordan Michaels</a>
             </div>
         </div>
         <div id="github-hover" class="col-lg-2" (mouseenter)="hoverGithub()" (mouseleave)="hoverGithub()">
-            <span class="fa fa-github info-icon" [ngClass]="isHovered('github')" [@hoverIcon]="isHovered('github')"></span>
-            <div *ngIf="hoverGithubVal" class="hover-item" [@slideIn]="'in'">
-                <!-- <div class="hover-item" [@slideIn]="'in'"> -->
+            <div class="hover-wrapper" [ngClass]="isHovered('github')" [@hoverIcon]="isHovered('github')">
+                <span class="fa fa-github info-icon"></span>
+            </div>
+            <div *ngIf="hoverGithubVal" class="hover-item" [@fadeIn]="'in'">
                 <a href="https://github.com/Jordsan">Jordsan</a>
             </div>
         </div>
+
     </div>
 </div>
 
@@ -63,7 +61,7 @@
         background
     </div>
     <div class="col-lg-6 section-content" id="background-content">
-        I am a full-stack software developer with a passion for continually learning. Currently I am majoring in Computer Information
+        I am a full-stack software engineer with a passion for continually learning. Currently I am majoring in Computer Information
         Systems at The University of Delaware with an expected graduation date of May 2018.
         <br>
         <br> With experience in both front-end and back-end development, I am comfortable working around the full stack. I always
@@ -146,10 +144,21 @@
     <div class="col-lg-4 section-title">
         Education
     </div>
-    <div class="col-lg-6 section-content" id="education-content">
-        <b>University of Delaware - Class of 2018</b>
-        <br>
-        <span>Bachelor of Science in Computer Information Systems</span>
+    <div class="col-lg-6 section-content">
+        <div class="row">
+            <span id="education-school">
+                <b>University of Delaware - Class of 2018</b>
+            </span>
+            <br>
+            <span id="education-major">Bachelor of Science in Computer Information Systems</span>
+        </div>
+        <div class="row more-info-row">
+            <div class="col-lg-12 more-info-col">
+                <button class="col-lg-12 more-info-button">
+                    test
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 <div class="row section">
