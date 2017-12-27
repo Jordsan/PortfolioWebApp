@@ -25,7 +25,8 @@
                 <span class="material-icons info-icon">email</span>
             </div>
             <div *ngIf="hoverEmailVal" class="hover-item" [@fadeIn]="'in'">
-                <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels@gmail.com</a>
+                <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels
+                    <br>@gmail.com</a>
             </div>
         </div>
         <div id="resume-hover" class="col-lg-2" (mouseenter)="hoverResume()" (mouseleave)="hoverResume()">
@@ -153,12 +154,66 @@
             <span id="education-major">Bachelor of Science in Computer Information Systems</span>
         </div>
         <div class="row more-info-row">
-            <div class="col-lg-12 more-info-col">
-                <button class="col-lg-12 more-info-button">
-                    test
+            <div class="col-lg-4 more-info-col">
+                <button class="more-info-button" (click)="educationClick()" [@slideDown]="educationMoreDetails">
+                    More Details
+                    <!-- <span class="material-icons">arrow_forward</span>  -->
                 </button>
             </div>
         </div>
+        <div *ngIf="educationMoreDetails" class="row more-info-row" [@slideIn]="'in'">
+            <div class="col-lg-12 more-info-col">
+                <ul class="more-info-list">
+                    <li>Cumulative GPA: 3.906</li>
+                    <li>University of Delaware Scholars Scholarship Recipient</li>
+                    <li>Alpha Lambda Delta Honors Society Member</li>
+
+                </ul>
+                <br>
+                <i id="courses-label">Selected Coursework:</i>
+                <br>
+                <div class="row" id="courses-header">
+                    <div class="col-lg-8">
+                        Computer Science
+                    </div>
+                    <div class="col-lg-4">
+                        Business
+                    </div>
+                </div>
+                <div class="row" id="courses-content">
+                    <div class="col-lg-4">
+                        <ul>
+                            <li>Algorithms</li>
+                            <li>Artificial Intelligence</li>
+                            <li>Assembly Language</li>
+                            <li>Cloud Cryptography</li>
+                            <li>Data Structures</li>
+                            <li>Database Systems</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul>
+                            <li>Machine Learning</li>
+                            <li>Network Fundamentals</li>
+                            <li>Parallel Computing</li>
+                            <li>Secure Software Design</li>
+                            <li>Web Technologies</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul>
+                            <li>Accounting</li>
+                            <li>Business Administration</li>
+                            <li>Business Operations</li>
+                            <li>Finance</li>
+                            <li>Marketing</li>
+                            <li>Statistics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 <div class="row section">

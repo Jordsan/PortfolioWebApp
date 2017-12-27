@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import {
     trigger,
     state,
@@ -12,37 +12,39 @@ import {
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css'],
     animations: [
-        // trigger('slideIn', [
-        //     state('in', style({ transform: 'translateX(0)' })),
-        //     transition('void => *', [
-        //         style({ transform: 'translateX(-100%)' }),
-        //         animate(250)
-        //     ]),
-        //     transition('* => void', [
-        //         animate(250, style({ transform: 'translateX(-100%)' }))
-        //     ])
-        // ]),
-        trigger('fadeIn', [
+        trigger('slideIn', [
             state('in', style({ opacity: 1 })),
             transition('void => *', [
-                style({ opacity: 0 }),
-                animate('150ms 150ms')
+                style({ opacity: 0, transform: 'translateX(-150%)' }),
+                animate('400ms ease-in')
             ]),
             transition('* => void', [
-                animate(100, style({ opacity: 0 }))
+                animate('250ms ease-out', style({ opacity: 0, transform: 'translateX(150%)' }))
             ])
-            // state('icon-hovered', style({
-            //     opacity: 1
-            // })),
-            // state('icon-not-hovered', style({
-            //     opacity: 0
-            // })),
-            // transition('icon-not-hovered => icon-hovered', animate('250ms ease-in')),
-            // transition('icon-hovered => icon-not-hovered', animate('250ms ease-out'))
+        ]),
+        trigger('slideDown', [
+            state('0', style({ transform: 'translateY(0)' })),
+            state('1', style({ transform: 'translateY(430px)' })),
+            transition('0 => 1', [
+                animate('300ms ease-in', style({ transform: 'translateY(430px)' }))
+            ]),
+            transition('1 => 0', [
+                animate('300ms ease-in')
+            ])
+        ]),
+        trigger('fadeIn', [
+            state('in', style({ opacity: 1, transform: 'scale(1.0)' })),
+            transition('void => *', [
+                style({ opacity: 0, transform: 'scale(.1)' }),
+                animate('200ms 50ms ease-in')
+            ]),
+            transition('* => void', [
+                animate('250ms ease-out', style({ opacity: 0, transform: 'scale(.1)' }))
+            ])
         ]),
         trigger('hoverIcon', [
             state('icon-hovered', style({
-                transform: 'scale(3.6)', opacity: 0.05
+                transform: 'scale(3.6)', opacity: 0.35
             })),
             state('icon-not-hovered', style({
                 transform: 'scale(1)', opacity: 1
@@ -61,7 +63,7 @@ export class HomeComponent implements OnInit {
     hoverLinkedInVal: boolean;
     hoverGithubVal: boolean;
 
-    hoverVal: boolean;
+    educationMoreDetails: boolean;
 
     constructor() { }
 
@@ -72,6 +74,12 @@ export class HomeComponent implements OnInit {
         this.hoverResumeVal = false;
         this.hoverLinkedInVal = false;
         this.hoverGithubVal = false;
+
+        this.educationMoreDetails = false;
+    }
+
+    educationClick(): void {
+        this.educationMoreDetails = !this.educationMoreDetails;
     }
 
     isHovered(input: string): string {
