@@ -19,7 +19,7 @@ import {
                 animate('400ms ease-in')
             ]),
             transition('* => void', [
-                animate('250ms ease-out', style({ opacity: 0, transform: 'translateX(150%)' }))
+                animate('300ms ease-out', style({ opacity: 0, transform: 'translateX(100%)' }))
             ])
         ]),
         trigger('slideDown', [
@@ -64,6 +64,7 @@ export class HomeComponent implements OnInit {
     hoverGithubVal: boolean;
 
     educationMoreDetails: boolean;
+    experienceMoreDetails: boolean;
 
     constructor() { }
 
@@ -76,10 +77,15 @@ export class HomeComponent implements OnInit {
         this.hoverGithubVal = false;
 
         this.educationMoreDetails = false;
+        this.experienceMoreDetails = false;
     }
 
     educationClick(): void {
         this.educationMoreDetails = !this.educationMoreDetails;
+    }
+
+    experienceClick(): void {
+        this.experienceMoreDetails = !this.experienceMoreDetails;
     }
 
     isHovered(input: string): string {
