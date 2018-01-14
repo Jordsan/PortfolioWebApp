@@ -24,12 +24,12 @@ import {
         ]),
         trigger('slideDown', [
             state('0', style({ transform: 'translateY(0)' })),
-            state('1', style({ transform: 'translateY(430px)' })),
+            state('1', style({ transform: 'translateY(560px)' })),
             transition('0 => 1', [
-                animate('300ms ease-in', style({ transform: 'translateY(430px)' }))
+                animate('200ms ease-in', style({ transform: 'translateY(560px)' }))
             ]),
             transition('1 => 0', [
-                animate('300ms ease-in')
+                animate('200ms 200ms ease-in')
             ])
         ]),
         trigger('fadeIn', [
@@ -64,7 +64,8 @@ export class HomeComponent implements OnInit {
     hoverGithubVal: boolean;
 
     educationMoreDetails: boolean;
-    experienceMoreDetails: boolean;
+    experienceMoreDetails1: boolean;
+    experienceMoreDetails2: boolean;
 
     constructor() { }
 
@@ -77,15 +78,20 @@ export class HomeComponent implements OnInit {
         this.hoverGithubVal = false;
 
         this.educationMoreDetails = false;
-        this.experienceMoreDetails = false;
+        this.experienceMoreDetails1 = false;
+        this.experienceMoreDetails2 = false;
     }
 
     educationClick(): void {
         this.educationMoreDetails = !this.educationMoreDetails;
     }
 
-    experienceClick(): void {
-        this.experienceMoreDetails = !this.experienceMoreDetails;
+    experienceClick1(): void {
+        this.experienceMoreDetails1 = !this.experienceMoreDetails1;
+    }
+
+    experienceClick2(): void {
+        this.experienceMoreDetails2 = !this.experienceMoreDetails2;
     }
 
     isHovered(input: string): string {

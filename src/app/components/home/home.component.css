@@ -32,6 +32,10 @@
     margin-bottom: 60px;
 }
 
+.expand-bottom {
+    margin-bottom: 585px !important;
+}
+
 .more-info-row {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -39,9 +43,11 @@
 }
 
 .more-info-col {
+    position: relative;
     padding: 0;
     display: flex;
     justify-content: flex-end;
+    height: 100%;
 }
 
 .more-info-icon {
@@ -71,6 +77,13 @@
 .more-info-button:active,
 .more-info-button:hover {
     background: #2a91ff;
+}
+
+.button-stack {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    margin-bottom: 30px;
 }
 
 .more-info-list {
@@ -278,4 +291,32 @@
     border: 2px solid #007bff;
     border-radius: 6px;
     font-size: .8em;
+}
+
+.project {
+    margin-bottom: 45px;
+}
+
+.project-header {
+    width: 100%;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.project-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.project-description {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+}
+
+#non-full-stack {
+    padding-left: 20px;
 }

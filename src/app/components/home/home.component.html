@@ -130,6 +130,7 @@
                 <ul>
                     <li>Git</li>
                     <li>Firebase</li>
+                    <li>HTTP</li>
                     <li>Cloud Foundry</li>
                     <li>MongoDB</li>
                     <li>Maven</li>
@@ -227,7 +228,7 @@
     </div>
     <div class="col-lg-6 section-content">
         <div class="row">
-            <div class="col-lg-7" [ngClass]="{'margin-bottom': !experienceMoreDetails }">
+            <div class="col-lg-7" [ngClass]="{'margin-bottom': !experienceMoreDetails1 }">
                 <b>JPMorgan Chase & Co.</b>
                 <br>
                 <span>Technology Analyst Intern</span>
@@ -236,7 +237,7 @@
                 June 2017 - Dec 2017
             </div>
         </div>
-        <div *ngIf="experienceMoreDetails" class="row experience-row" [@slideIn]="'in'">
+        <div *ngIf="experienceMoreDetails1" class="row experience-row" [@slideIn]="'in'">
             <div class="col-lg-12 no-padding">
                 <div class="experience-project">
                     <div class="experience-detail-header">
@@ -268,6 +269,7 @@
                             <span class="technology-tag">Java</span>
                             <span class="technology-tag">Spring&nbsp;Boot</span>
                             <span class="technology-tag">Spring&nbsp;MVC</span>
+                            <span class="technology-tag">HTTP</span>
                             <span class="technology-tag">JPA</span>
                             <span class="technology-tag">Oracle</span>
                             <span class="technology-tag">Cloud&nbsp;Foundry</span>
@@ -305,6 +307,7 @@
                             <span class="technology-tag">Kafka</span>
                             <span class="technology-tag">Spring&nbsp;Boot</span>
                             <span class="technology-tag">JAX-RS&nbsp;Jersey</span>
+                            <span class="technology-tag">HTTP</span>
                             <span class="technology-tag">JPA</span>
                             <span class="technology-tag">Oracle</span>
                             <span class="technology-tag">Cloud&nbsp;Foundry</span>
@@ -323,7 +326,7 @@
                 June 2014 - Aug 2016
             </div>
         </div>
-        <div *ngIf="experienceMoreDetails" class="row experience-row" [@slideIn]="'in'">
+        <div *ngIf="experienceMoreDetails2" class="row experience-row" [@slideIn]="'in'">
             <div class="col-lg-12 no-padding">
                 <ul class="more-info-list">
                     <li>Created an online company catalog-webstore to increase efficiency of orders by eliminating manual processing
@@ -334,15 +337,29 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-1 more-info-col">
-        <button class="more-info-button" (click)="experienceClick()">
-            <!-- [@slideDown]="educationMoreDetails"> -->
-            <span *ngIf="!experienceMoreDetails" class="material-icons">more_horiz</span>
-            <span *ngIf="experienceMoreDetails" class="material-icons">more_vert</span>
+    <div class="col-lg-1">
+        <div class="row button-stack">
+            <button class="more-info-button" (click)="experienceClick1()">
+                <!-- [@slideDown]="educationMoreDetails"> -->
+                <span *ngIf="!experienceMoreDetails1" class="material-icons">more_horiz</span>
+                <span *ngIf="experienceMoreDetails1" class="material-icons">more_vert</span>
 
-            <!-- More Details -->
-            <!-- <span class="material-icons">arrow_forward</span>  -->
-        </button>
+                <!-- More Details -->
+                <!-- <span class="material-icons">arrow_forward</span>  -->
+            </button>
+
+        </div>
+        <div class="row button-stack" [@slideDown]="experienceMoreDetails1">
+            <button class="more-info-button" (click)="experienceClick2()">
+                <!-- [@slideDown]="educationMoreDetails"> -->
+                <span *ngIf="!experienceMoreDetails2" class="material-icons">more_horiz</span>
+                <span *ngIf="experienceMoreDetails2" class="material-icons">more_vert</span>
+
+                <!-- More Details -->
+                <!-- <span class="material-icons">arrow_forward</span>  -->
+            </button>
+
+        </div>
     </div>
 </div>
 
@@ -351,12 +368,132 @@
         Projects
     </div>
     <div class="col-lg-6 section-content">
-        asdf
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <div class="row project">
+            <div class="col-lg-6">
+                <img class="project-image" src="/assets/angular-firebase.png">
+            </div>
+            <div class="col-lg-6">
+                <div class="project-header">
+                    Personal Portfolio Website
+                </div>
+                <div class="project-description">
+                    This website portrays my background, skills, and personal projects. It was developed using Angular and Bootstrap, and is
+                    hosted on Firebase.
+                </div>
+            </div>
+            <div class="col-lg-12 technology-wrapper">
+                <div class="col-lg-2 technology-header">
+                    Front End
+                </div>
+                <div class="technology-list no-padding">
+                    <span class="technology-tag">Angular</span>
+                    <span class="technology-tag">HTML</span>
+                    <span class="technology-tag">CSS</span>
+                    <span class="technology-tag">Typescript</span>
+                    <span class="technology-tag">Bootstrap</span>
+                </div>
+            </div>
+            <div class="col-lg-12 technology-wrapper">
+                <div class="col-lg-2 technology-header">
+                    Back End
+                </div>
+                <div class="technology-list no-padding">
+                    <span class="technology-tag">Firebase</span>
+                </div>
+            </div>
+        </div>
+        <div class="row project">
+            <div class="col-lg-6">
+                <img class="project-image" src="/assets/ionic.svg">
+            </div>
+            <div class="col-lg-6">
+                <div class="project-header">
+                    Restaurant Roulette
+                </div>
+                <div class="project-description">
+                    Cross platform mobile cloud application built using Angular, Firebase, and Ionic. The app recommends nearby restaurants based
+                    on inputted user preferences.
+                </div>
+            </div>
+            <div class="col-lg-12 technology-wrapper">
+                <div class="col-lg-2 technology-header">
+                    Front End
+                </div>
+                <div class="technology-list no-padding">
+                    <span class="technology-tag">Ionic</span>
+                    <span class="technology-tag">Angular</span>
+                    <span class="technology-tag">HTML</span>
+                    <span class="technology-tag">SCSS</span>
+                    <span class="technology-tag">Typescript</span>
+                </div>
+            </div>
+            <div class="col-lg-12 technology-wrapper">
+                <div class="col-lg-2 technology-header">
+                    Back End
+                </div>
+                <div class="technology-list no-padding">
+                    <span class="technology-tag">Firebase</span>
+                    <span class="technology-tag">HTTP</span>
+                    <span class="technology-tag">Google&nbsp;Places&nbsp;API</span>
+                </div>
+            </div>
+        </div>
+        <div class="row project">
+            <div class="col-lg-6">
+                <img class="project-image" src="/assets/meanstack.jpg">
+            </div>
+            <div class="col-lg-6">
+                <div class="project-header">
+                    Shared Event Planner Calendar
+                </div>
+                <div class="project-description">
+                    Calendar-view web application for planning shared events between users. Built using MongoDB, Express.js, Angular, and Node.js.
+                </div>
+            </div>
+            <div class="col-lg-12 technology-wrapper">
+                <div class="col-lg-2 technology-header">
+                    Front End
+                </div>
+                <div class="technology-list no-padding">
+                    <span class="technology-tag">Angular</span>
+                    <span class="technology-tag">HTML</span>
+                    <span class="technology-tag">CSS</span>
+                    <span class="technology-tag">Typescript</span>
+                    <span class="technology-tag">Bootstrap</span>
+                </div>
+            </div>
+            <div class="col-lg-12 technology-wrapper">
+                <div class="col-lg-2 technology-header">
+                    Back End
+                </div>
+                <div class="technology-list no-padding">
+                    <span class="technology-tag">MongoDB</span>
+                    <span class="technology-tag">Mongoose</span>
+                    <span class="technology-tag">Express.js</span>
+                    <span class="technology-tag">Node.js</span>
+                </div>
+            </div>
+        </div>
+        <div class="row project">
+            <div class="col-lg-6">
+                <img class="project-image" src="/assets/python.png">
+            </div>
+            <div class="col-lg-6">
+                <div class="project-header">
+                    Cryptocurrency Market Cap Spreadsheet Generator
+                </div>
+                <div class="project-description">
+                    Python script that fetches data on the top cryptocurrencies by market cap, and outputs the data in an Excell spreadsheet.
+                    Data is retrieved from Coinmarketcap's public API.
+                </div>
+            </div>
+            <div class="col-lg-12 technology-wrapper">
+                <div class="technology-list no-padding" id="non-full-stack">
+                    <span class="technology-tag">Python</span>
+                    <span class="technology-tag">HTTP</span>
+                    <span class="technology-tag">Coinmarketcap&nbsp;API</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
