@@ -57,6 +57,11 @@
     padding: 0;
 }
 
+.no-margin {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .padding-left {
     padding-left: 15px;
     padding-right: 0;
