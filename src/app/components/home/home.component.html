@@ -131,15 +131,22 @@
     </div>
 </div>
 <div class="row section" id="education">
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 section-title">
         <p>
             Education
         </p>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10 section-content">
+    <div class="col-xs-6 visible-xs-block">
+        <button class="more-info-button" (click)="educationClick()">
+            <span class="more-button-text">More Details</span>
+            <span *ngIf="!educationMoreDetails" class="material-icons more-button-icon">arrow_drop_down</span>
+            <span *ngIf="educationMoreDetails" class="material-icons more-button-icon">arrow_drop_up</span>
+        </button>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
         <div class="row">
             <span id="education-school">
-                <b>University of Delaware - Class of 2018</b>
+                <b>University of Delaware - Class&nbsp;of&nbsp;2018</b>
             </span>
             <br>
             <span id="education-major">Bachelor of Science in Computer Information Systems</span>
@@ -155,35 +162,49 @@
                 <i id="courses-label">Selected Coursework:</i>
                 <br>
                 <div class="row">
-                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                        <div class="courses-header">Computer Science</div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 courses-content">
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 no-padding">
+                        <div class="courses-header">Computer&nbsp;Science</div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 courses-content no-padding">
                             <ul>
                                 <li>Algorithms</li>
-                                <li>Artificial Intelligence</li>
-                                <li>Assembly Language</li>
-                                <li>Cloud Cryptography</li>
-                                <li>Data Structures</li>
-                                <li>Database Systems</li>
+                                <li>Artificial&nbsp;Intelligence</li>
+                                <li>Assembly&nbsp;Language</li>
+                                <li>Cloud&nbsp;Cryptography</li>
+                                <li>Data&nbsp;Structures</li>
+                                <li>Database&nbsp;Systems</li>
                             </ul>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 courses-content">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 courses-content no-padding">
                             <ul>
-                                <li>Machine Learning</li>
-                                <li>Network Fundamentals</li>
-                                <li>Parallel Computing</li>
-                                <li>Secure Software Design</li>
-                                <li>Web Technologies</li>
+                                <li>Machine&nbsp;Learning</li>
+                                <li>Network&nbsp;Fundamentals</li>
+                                <li>Parallel&nbsp;Computing</li>
+                                <li>Secure&nbsp;Software&nbsp;Design</li>
+                                <li>Web&nbsp;Technologies</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 no-padding">
                         <div class="courses-header">Business</div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 courses-content">
+                        <div class="visible-lg-block col-lg-12 courses-content no-padding">
                             <ul>
                                 <li>Accounting</li>
                                 <li>Business Administration</li>
-                                <li>Business Operations</li>
+                                <li>Business&nbsp;Operations</li>
+                                <li>Finance</li>
+                                <li>Marketing</li>
+                                <li>Statistics</li>
+                            </ul>
+                        </div>
+                        <div class="hidden-lg col-md-6 col-sm-6 col-xs-12 courses-content no-padding">
+                            <ul>
+                                <li>Accounting</li>
+                                <li>Business Administration</li>
+                                <li>Business&nbsp;Operations</li>
+                            </ul>
+                        </div>
+                        <div class="hidden-lg col-md-6 col-sm-6 col-xs-12 courses-content no-padding">
+                            <ul>
                                 <li>Finance</li>
                                 <li>Marketing</li>
                                 <li>Statistics</li>
@@ -195,34 +216,41 @@
         </div>
 
     </div>
-    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 more-info-col">
+    <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs more-info-col">
         <button class="more-info-button" (click)="educationClick()">
-            <!-- [@slideDown]="educationMoreDetails"> -->
-            <span *ngIf="!educationMoreDetails" class="material-icons">more_horiz</span>
-            <span *ngIf="educationMoreDetails" class="material-icons">more_vert</span>
-
-            <!-- More Details -->
-            <!-- <span class="material-icons">arrow_forward</span>  -->
+            <span class="more-button-text">More&nbsp;Details</span>
+            <span *ngIf="!educationMoreDetails" class="material-icons more-button-icon">arrow_drop_down</span>
+            <span *ngIf="educationMoreDetails" class="material-icons more-button-icon">arrow_drop_up</span>
         </button>
     </div>
 </div>
 <div class="row section">
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 section-title">
         Experience
+    </div>
+    <div class="col-xs-6 visible-xs-block">
+        <button class="more-info-button" (click)="experienceClickBoth()">
+            <span class="more-button-text">More Details</span>
+            <span *ngIf="!experienceMoreDetails1" class="material-icons more-button-icon">arrow_drop_down</span>
+            <span *ngIf="experienceMoreDetails1" class="material-icons more-button-icon">arrow_drop_up</span>
+        </button>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
         <div class="row">
-            <div class="col-lg-7" [ngClass]="{'margin-bottom': !experienceMoreDetails1 }">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" [ngClass]="{'margin-bottom': !experienceMoreDetails1 }">
                 <b>JPMorgan Chase & Co.</b>
                 <br>
                 <span>Technology Analyst Intern</span>
+                <div class="visible-sm-block visible-xs-block experience-date">
+                    June 2017 - Dec 2017
+                </div>
             </div>
-            <div class="col-lg-5 experience-date">
+            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs experience-date">
                 June 2017 - Dec 2017
             </div>
         </div>
         <div *ngIf="experienceMoreDetails1" class="row experience-row" [@slideIn]="'in'">
-            <div class="col-lg-12 no-padding">
+            <div class="col-lg-12 col-md-12-col-sm-12 col-xs-12 no-padding">
                 <div class="experience-project">
                     <div class="experience-detail-header">
                         Full Stack Web Portal
@@ -234,7 +262,7 @@
                         </li>
                     </ul>
                     <div class="row technology-wrapper">
-                        <div class="col-lg-2 technology-header">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 technology-header">
                             Front End
                         </div>
                         <div class="technology-list no-padding">
@@ -246,7 +274,7 @@
                         </div>
                     </div>
                     <div class="row technology-wrapper">
-                        <div class="col-lg-2 technology-header">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 technology-header">
                             Back End
                         </div>
                         <div class="technology-list no-padding">
@@ -262,7 +290,7 @@
                 </div>
                 <div class="experience-project">
                     <div class="experience-detail-header">
-                        Customer Support Agent Status Widget
+                        Support Agent Status Widget
                     </div>
                     <ul class="more-info-list">
                         <li>Worked in an 8-person scrum team with 3 week sprints following Agile/Scrum methodologies</li>
@@ -271,7 +299,7 @@
                         </li>
                     </ul>
                     <div class="row technology-wrapper">
-                        <div class="col-lg-2 technology-header">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 technology-header">
                             Front End
                         </div>
                         <div class="technology-list no-padding">
@@ -283,15 +311,15 @@
                         </div>
                     </div>
                     <div class="row technology-wrapper">
-                        <div class="col-lg-2 technology-header">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 technology-header">
                             Back End
                         </div>
                         <div class="technology-list no-padding">
                             <span class="technology-tag">Java</span>
                             <span class="technology-tag">Kafka</span>
                             <span class="technology-tag">Spring&nbsp;Boot</span>
-                            <span class="technology-tag">JAX-RS&nbsp;Jersey</span>
                             <span class="technology-tag">HTTP</span>
+                            <span class="technology-tag">JAX&nbsp;RS&nbsp;Jersey</span>
                             <span class="technology-tag">JPA</span>
                             <span class="technology-tag">Oracle</span>
                             <span class="technology-tag">Cloud&nbsp;Foundry</span>
@@ -301,17 +329,20 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-7 experience-content">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 experience-content">
                 <b>GBG, The Corporate Gift Source, Inc.</b>
                 <br>
                 <span>Sales & Marketing Associate</span>
+                <div class="visible-sm-block visible-xs-block experience-date">
+                    June 2014 - Aug 2016
+                </div>
             </div>
-            <div class="col-lg-5 experience-date">
+            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs experience-date">
                 June 2014 - Aug 2016
             </div>
         </div>
         <div *ngIf="experienceMoreDetails2" class="row experience-row" [@slideIn]="'in'">
-            <div class="col-lg-12 no-padding">
+            <div class="col-lg-12 col-md-12-col-sm-12 col-xs-12 no-padding">
                 <ul class="more-info-list">
                     <li>Created an online company catalog-webstore to increase efficiency of orders by eliminating manual processing
                         of the transactions</li>
@@ -321,29 +352,12 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-1">
-        <div class="row button-stack">
-            <button class="more-info-button" (click)="experienceClick1()">
-                <!-- [@slideDown]="educationMoreDetails"> -->
-                <span *ngIf="!experienceMoreDetails1" class="material-icons">more_horiz</span>
-                <span *ngIf="experienceMoreDetails1" class="material-icons">more_vert</span>
-
-                <!-- More Details -->
-                <!-- <span class="material-icons">arrow_forward</span>  -->
-            </button>
-
-        </div>
-        <div class="row button-stack" [@slideDown]="experienceMoreDetails1">
-            <button class="more-info-button" (click)="experienceClick2()">
-                <!-- [@slideDown]="educationMoreDetails"> -->
-                <span *ngIf="!experienceMoreDetails2" class="material-icons">more_horiz</span>
-                <span *ngIf="experienceMoreDetails2" class="material-icons">more_vert</span>
-
-                <!-- More Details -->
-                <!-- <span class="material-icons">arrow_forward</span>  -->
-            </button>
-
-        </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs more-info-col">
+        <button class="more-info-button" (click)="experienceClickBoth()">
+            <span class="more-button-text">More&nbsp;Details</span>
+            <span *ngIf="!educationMoreDetails" class="material-icons more-button-icon">arrow_drop_down</span>
+            <span *ngIf="educationMoreDetails" class="material-icons more-button-icon">arrow_drop_up</span>
+        </button>
     </div>
 </div>
 
@@ -353,10 +367,10 @@
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
         <div class="row project">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <img class="project-image" src="/assets/angular-firebase.png">
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div class="project-header">
                     Personal Portfolio Website
                 </div>
@@ -365,11 +379,11 @@
                     hosted on Firebase.
                 </div>
             </div>
-            <div class="col-lg-12 technology-wrapper">
-                <div class="col-lg-2 technology-header">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
                     Front End
                 </div>
-                <div class="technology-list no-padding">
+                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
                     <span class="technology-tag">Angular</span>
                     <span class="technology-tag">HTML</span>
                     <span class="technology-tag">CSS</span>
@@ -377,20 +391,20 @@
                     <span class="technology-tag">Bootstrap</span>
                 </div>
             </div>
-            <div class="col-lg-12 technology-wrapper">
-                <div class="col-lg-2 technology-header">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
                     Back End
                 </div>
-                <div class="technology-list no-padding">
+                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
                     <span class="technology-tag">Firebase</span>
                 </div>
             </div>
         </div>
         <div class="row project">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <img class="project-image" src="/assets/ionic.svg">
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div class="project-header">
                     Restaurant Roulette
                 </div>
@@ -399,11 +413,11 @@
                     on inputted user preferences.
                 </div>
             </div>
-            <div class="col-lg-12 technology-wrapper">
-                <div class="col-lg-2 technology-header">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
                     Front End
                 </div>
-                <div class="technology-list no-padding">
+                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
                     <span class="technology-tag">Ionic</span>
                     <span class="technology-tag">Angular</span>
                     <span class="technology-tag">HTML</span>
@@ -411,11 +425,11 @@
                     <span class="technology-tag">Typescript</span>
                 </div>
             </div>
-            <div class="col-lg-12 technology-wrapper">
-                <div class="col-lg-2 technology-header">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
                     Back End
                 </div>
-                <div class="technology-list no-padding">
+                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
                     <span class="technology-tag">Firebase</span>
                     <span class="technology-tag">HTTP</span>
                     <span class="technology-tag">Google&nbsp;Places&nbsp;API</span>
@@ -423,10 +437,10 @@
             </div>
         </div>
         <div class="row project">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <img class="project-image" src="/assets/meanstack.jpg">
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div class="project-header">
                     Shared Event Planner Calendar
                 </div>
@@ -434,11 +448,11 @@
                     Calendar-view web application for planning shared events between users. Built using MongoDB, Express.js, Angular, and Node.js.
                 </div>
             </div>
-            <div class="col-lg-12 technology-wrapper">
-                <div class="col-lg-2 technology-header">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
                     Front End
                 </div>
-                <div class="technology-list no-padding">
+                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
                     <span class="technology-tag">Angular</span>
                     <span class="technology-tag">HTML</span>
                     <span class="technology-tag">CSS</span>
@@ -446,11 +460,11 @@
                     <span class="technology-tag">Bootstrap</span>
                 </div>
             </div>
-            <div class="col-lg-12 technology-wrapper">
-                <div class="col-lg-2 technology-header">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
                     Back End
                 </div>
-                <div class="technology-list no-padding">
+                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
                     <span class="technology-tag">MongoDB</span>
                     <span class="technology-tag">Mongoose</span>
                     <span class="technology-tag">Express.js</span>
@@ -459,10 +473,10 @@
             </div>
         </div>
         <div class="row project">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <img class="project-image" src="/assets/python.png">
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div class="project-header">
                     Cryptocurrency Market Cap Spreadsheet Generator
                 </div>
@@ -471,7 +485,7 @@
                     Data is retrieved from Coinmarketcap's public API.
                 </div>
             </div>
-            <div class="col-lg-12 technology-wrapper">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
                 <div class="technology-list no-padding" id="non-full-stack">
                     <span class="technology-tag">Python</span>
                     <span class="technology-tag">HTTP</span>

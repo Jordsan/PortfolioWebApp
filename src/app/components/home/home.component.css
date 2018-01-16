@@ -15,6 +15,10 @@
         text-align: left !important;
         margin-bottom: 12px !important;
     }
+
+    .project-image {
+        /* max-width: 75% !important; */
+    }
 }
 
 
@@ -63,6 +67,10 @@
     padding-left: 0px;
 }
 
+.margin-right {
+    margin-right: 15px;
+}
+
 .margin-bottom {
     margin-bottom: 30px;
 }
@@ -84,9 +92,8 @@
 .more-info-col {
     position: relative;
     padding: 0;
-    margin-left: 10px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     height: 100%;
 }
 
@@ -97,25 +104,43 @@
     font-size: 2.0em; */
 }
 
-.more-info-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.0em;
-    width: 45px;
-    height: 40px;
-    background: #007bff;
-    border-radius: 12px;
-    color: white;
-    z-index: 100;
-}
-
 .more-info-button:focus {
     outline: 0;
 }
 
 .more-info-button:active,
 .more-info-button:hover {
+    background: #2a91ff;
+}
+
+.more-button-text {
+    margin-left: 4px;
+}
+
+.more-button-icon {
+    font-size: 1.4em;
+    margin-left: 4px;
+}
+
+.more-info-button {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .80em;
+    min-height: 25px;
+    height: auto;
+    background: #007bff;
+    border-radius: 12px;
+    color: white;
+    z-index: 100;
+}
+
+.more-info-button-mobile:focus {
+    outline: 0;
+}
+
+.more-info-button-mobile:active {
     background: #2a91ff;
 }
 
@@ -136,7 +161,7 @@
 .more-info-list li {
     display: flex;
     align-items: center;
-    padding-left: 1em;
+    padding-left: .5em;
     text-indent: -1em;
     margin-bottom: 6px;
 }
@@ -262,7 +287,7 @@
 }
 
 .courses-header {
-    text-align: center;
+    text-align: left;
     font-weight: 700;
     font-size: .95em;
     margin-top: 20px;
@@ -272,10 +297,11 @@
 
 .courses-content ul,
 .courses-content li {
-    padding: 0 0 4px 0;
+    padding: 0 0 0 0;
     list-style-type: none;
     font-size: 0.95em;
     font-weight: 300;
+    margin: 0;
 }
 
 .experience-content span {
@@ -288,12 +314,12 @@
     align-items: flex-end;
     height: 23px;
     color: #555555;
-    font-size: .95em;
+    font-size: .90em;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 .experience-row {
-    margin: 10px 0 0 15px;
+    margin: 10px 0 0 0px;
 }
 
 .experience-project {
@@ -301,7 +327,7 @@
 }
 
 .experience-detail-header {
-    width: 75%;
+    width: 100%;
     padding-bottom: 4px;
     margin-top: 12px;
     margin-bottom: 12px;
@@ -313,7 +339,6 @@
 .technology-wrapper {
     margin-top: 6px;
     margin-bottom: 6px;
-    padding-left: 12px;
     /* width: 80% */
     line-height: 30px;
     /* overflow: hidden; */
@@ -324,11 +349,12 @@
 }
 
 .technology-header {
-    display: inline-block;
+    /* display: inline-block; */
     padding-right: 0;
+    padding-left: 0;
     font-size: .9em;
     font-weight: 700;
-    width: 100px;
+    /* width: 100px; */
 }
 
 .technology-tag {
@@ -361,8 +387,4 @@
     margin-bottom: 15px;
     width: 100%;
     text-align: left;
-}
-
-#non-full-stack {
-    padding-left: 20px;
 }

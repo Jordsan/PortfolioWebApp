@@ -22,16 +22,6 @@ import {
                 animate('300ms ease-out', style({ opacity: 0, transform: 'translateX(100%)' }))
             ])
         ]),
-        trigger('slideDown', [
-            state('0', style({ transform: 'translateY(0)' })),
-            state('1', style({ transform: 'translateY(560px)' })),
-            transition('0 => 1', [
-                animate('200ms ease-in', style({ transform: 'translateY(560px)' }))
-            ]),
-            transition('1 => 0', [
-                animate('200ms 200ms ease-in')
-            ])
-        ]),
         trigger('fadeIn', [
             state('in', style({ opacity: 1, transform: 'scale(1.0)' })),
             transition('void => *', [
@@ -86,11 +76,8 @@ export class HomeComponent implements OnInit {
         this.educationMoreDetails = !this.educationMoreDetails;
     }
 
-    experienceClick1(): void {
+    experienceClickBoth(): void {
         this.experienceMoreDetails1 = !this.experienceMoreDetails1;
-    }
-
-    experienceClick2(): void {
         this.experienceMoreDetails2 = !this.experienceMoreDetails2;
     }
 
