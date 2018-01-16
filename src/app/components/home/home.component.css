@@ -1,3 +1,32 @@
+/* Large desktop */
+
+@media (min-width: 1200px) {}
+
+
+/* Portrait tablet to landscape and desktop */
+
+@media (min-width: 768px) and (max-width: 979px) {}
+
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 767px) {
+    .section .section-title {
+        text-align: left !important;
+        margin-bottom: 12px !important;
+    }
+}
+
+
+/* Landscape phones and down */
+
+@media (max-width: 480px) {
+    .section .section-title {
+        text-align: left !important;
+        margin-bottom: 12px !important;
+    }
+}
+
 .section {
     text-align: center;
     margin: 150px 0px 50px 0px;
@@ -24,6 +53,16 @@
     padding: 0;
 }
 
+.padding-left {
+    padding-left: 15px;
+    padding-right: 0;
+}
+
+.padding-right {
+    padding-right: 15px;
+    padding-left: 0px;
+}
+
 .margin-bottom {
     margin-bottom: 30px;
 }
@@ -45,6 +84,7 @@
 .more-info-col {
     position: relative;
     padding: 0;
+    margin-left: 10px;
     display: flex;
     justify-content: flex-end;
     height: 100%;
@@ -65,7 +105,7 @@
     width: 45px;
     height: 40px;
     background: #007bff;
-    border-radius: 12px; 
+    border-radius: 12px;
     color: white;
     z-index: 100;
 }
@@ -126,6 +166,10 @@
     width: 60px;
 }
 
+.hover-border {
+    margin-bottom: 75px;
+}
+
 .info-icon {
     position: relative;
     display: flex;
@@ -153,7 +197,7 @@
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
-    font-size: 1.6em;
+    font-size: 1.2em;
     color: black !important;
 }
 
@@ -165,24 +209,26 @@
 .icon-hovered {
     /* border: 1px solid black;
     border-radius: 50%; */
+    z-index: 0;
 }
 
 .icon-not-hovered {
     /* border: none; */
+    z-index: 10;
 }
 
 #background {
-    margin-top: 100px;
+    margin-top: 40px !important;
 }
 
 #background-content {
     font-weight: 300;
 }
 
-#skill-header div {
+.skill-header {
     text-align: left;
-    font-weight: 700;
-    font-size: 1.05em;
+    font-weight: 700 !important;
+    font-size: 1.05em !important;
     margin-bottom: 6px;
     padding-bottom: 4px;
     border-bottom: 2px solid #007bff;
@@ -202,7 +248,7 @@
 }
 
 #education-school {
-   padding: 0;
+    padding: 0;
 }
 
 #education-major {
@@ -215,7 +261,7 @@
     font-weight: 700;
 }
 
-#courses-header div {
+.courses-header {
     text-align: center;
     font-weight: 700;
     font-size: .95em;
@@ -224,8 +270,8 @@
     border-bottom: 2px solid #007bff;
 }
 
-#courses-content ul,
-#courses-content li {
+.courses-content ul,
+.courses-content li {
     padding: 0 0 4px 0;
     list-style-type: none;
     font-size: 0.95em;
@@ -279,7 +325,7 @@
 
 .technology-header {
     display: inline-block;
-    padding-right: 0; 
+    padding-right: 0;
     font-size: .9em;
     font-weight: 700;
     width: 100px;

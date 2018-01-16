@@ -11,4 +11,7 @@ export class AppComponent {
 
     }
 
+    scroll(): void {
+        document.getElementById('main-wrapper').scrollIntoView(true);
+    }
 }

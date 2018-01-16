@@ -1,67 +1,63 @@
-<div>
-    <div class="row" id="personal-info">
-        <div id="home-hover" class="col-lg-2" (mouseenter)="hoverHome()" (mouseleave)="hoverHome()">
-            <div class="hover-wrapper" [ngClass]="isHovered('home')" [@hoverIcon]="isHovered('home')">
-                <span class="material-icons info-icon">home</span>
-
-            </div>
-            <div *ngIf="hoverHomeVal" class="hover-item" [@fadeIn]="'in'">
-                <!-- <a href="https://goo.gl/maps/XAC99K2tJ1v">
+<div class="row" id="personal-info">
+    <div id="home-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverHome()" (mouseleave)="hoverHome()">
+        <div class="hover-wrapper" [ngClass]="isHovered('home')" [@hoverIcon]="isHovered('home')">
+            <span class="material-icons info-icon">home</span>
+        </div>
+        <div *ngIf="hoverHomeVal" class="hover-item" [@fadeIn]="'in'">
+            <!-- <a href="https://goo.gl/maps/XAC99K2tJ1v">
                     438 Penfield Road, Fairfield, CT, 06824
                 </a> -->
-                438 Penfield Road, Fairfield, CT, 06824
-            </div>
+            438 Penfield Road, Fairfield, CT, 06824
         </div>
-        <div id="phone-hover" class="col-lg-2" (mouseenter)="hoverPhone()" (mouseleave)="hoverPhone()">
-            <div class="hover-wrapper" [ngClass]="isHovered('phone')" [@hoverIcon]="isHovered('phone')">
-                <span class="material-icons info-icon">phone</span>
-            </div>
-            <div *ngIf="hoverPhoneVal" class="hover-item" [@fadeIn]="'in'">
-                203-727-3656
-            </div>
+    </div>
+    <div id="phone-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverPhone()" (mouseleave)="hoverPhone()">
+        <div class="hover-wrapper" [ngClass]="isHovered('phone')" [@hoverIcon]="isHovered('phone')">
+            <span class="material-icons info-icon">phone</span>
         </div>
-        <div id="email-hover" class="col-lg-2" (mouseenter)="hoverEmail()" (mouseleave)="hoverEmail()">
-            <div class="hover-wrapper" [ngClass]="isHovered('email')" [@hoverIcon]="isHovered('email')">
-                <span class="material-icons info-icon">email</span>
-            </div>
-            <div *ngIf="hoverEmailVal" class="hover-item" [@fadeIn]="'in'">
-                <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels
-                    <br>@gmail.com</a>
-            </div>
+        <div *ngIf="hoverPhoneVal" class="hover-item" [@fadeIn]="'in'">
+            203-727-3656
         </div>
-        <div id="resume-hover" class="col-lg-2" (mouseenter)="hoverResume()" (mouseleave)="hoverResume()">
-            <div class="hover-wrapper" [ngClass]="isHovered('resume')" [@hoverIcon]="isHovered('resume')">
-                <span class="fa fa-file-text-o info-icon"></span>
-            </div>
-            <div *ngIf="hoverResumeVal" class="hover-item" [@fadeIn]="'in'">
-                Resume.pdf
-            </div>
+    </div>
+    <div id="email-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverEmail()" (mouseleave)="hoverEmail()">
+        <div class="hover-wrapper" [ngClass]="isHovered('email')" [@hoverIcon]="isHovered('email')">
+            <span class="material-icons info-icon">email</span>
         </div>
-        <div id="linkedin-hover" class="col-lg-2" (mouseenter)="hoverLinkedIn()" (mouseleave)="hoverLinkedIn()">
-            <div class="hover-wrapper" [ngClass]="isHovered('linkedin')" [@hoverIcon]="isHovered('linkedin')">
-                <span class="fa fa-linkedin-square info-icon"></span>
-            </div>
-            <div *ngIf="hoverLinkedInVal" class="hover-item" [@fadeIn]="'in'">
-                <a href="https://www.linkedin.com/in/jordan-michaels-589385149/">Jordan Michaels</a>
-            </div>
+        <div *ngIf="hoverEmailVal" class="hover-item" [@fadeIn]="'in'">
+            <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels
+                <br>@gmail.com</a>
         </div>
-        <div id="github-hover" class="col-lg-2" (mouseenter)="hoverGithub()" (mouseleave)="hoverGithub()">
-            <div class="hover-wrapper" [ngClass]="isHovered('github')" [@hoverIcon]="isHovered('github')">
-                <span class="fa fa-github info-icon"></span>
-            </div>
-            <div *ngIf="hoverGithubVal" class="hover-item" [@fadeIn]="'in'">
-                <a href="https://github.com/Jordsan">Jordsan</a>
-            </div>
+    </div>
+    <div id="resume-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverResume()" (mouseleave)="hoverResume()">
+        <div class="hover-wrapper" [ngClass]="isHovered('resume')" [@hoverIcon]="isHovered('resume')">
+            <span class="fa fa-file-text-o info-icon"></span>
         </div>
-
+        <div *ngIf="hoverResumeVal" class="hover-item" [@fadeIn]="'in'">
+            Resume.pdf
+        </div>
+    </div>
+    <div id="linkedin-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverLinkedIn()" (mouseleave)="hoverLinkedIn()">
+        <div class="hover-wrapper" [ngClass]="isHovered('linkedin')" [@hoverIcon]="isHovered('linkedin')">
+            <span class="fa fa-linkedin-square info-icon"></span>
+        </div>
+        <div *ngIf="hoverLinkedInVal" class="hover-item" [@fadeIn]="'in'">
+            <a href="https://www.linkedin.com/in/jordan-michaels-589385149/">Jordan Michaels</a>
+        </div>
+    </div>
+    <div id="github-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverGithub()" (mouseleave)="hoverGithub()">
+        <div class="hover-wrapper" [ngClass]="isHovered('github')" [@hoverIcon]="isHovered('github')">
+            <span class="fa fa-github info-icon"></span>
+        </div>
+        <div *ngIf="hoverGithubVal" class="hover-item" [@fadeIn]="'in'">
+            <a href="https://github.com/Jordsan">Jordsan</a>
+        </div>
     </div>
 </div>
 
 <div class="row section" id="background">
-    <div class="col-lg-4 section-title">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
         background
     </div>
-    <div class="col-lg-6 section-content" id="background-content">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content" id="background-content">
         I am a full-stack software engineer with a passion for continually learning. Currently I am majoring in Computer Information
         Systems at The University of Delaware with an expected graduation date of May 2018.
         <br>
@@ -72,53 +68,43 @@
     </div>
 </div>
 <div class="row section">
-    <div class="col-lg-4 section-title">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
         Skills
     </div>
-    <div class="col-lg-6 section-content">
-        <div class="row" id="skill-header">
-            <div class="col-lg-3">
-                Languages
-            </div>
-            <div class="col-lg-3">
-                Frameworks
-            </div>
-            <div class="col-lg-3">
-                Libraries
-            </div>
-            <div class="col-lg-3">
-                Tools
-            </div>
-        </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
         <div class="row" id="skill-content">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <ul>
+                    <li class="skill-header">Languages</li>
                     <li>Java</li>
                     <li>Javascript</li>
                     <li>Typescript</li>
                     <li>HTML</li>
-                    <li>CSS & SCSS</li>
+                    <li>CSS&nbsp;&&nbsp;SCSS</li>
                     <li>Python</li>
-                    <li>C & C++</li>
+                    <li>C&nbsp;&&nbsp;C++</li>
                     <li>PHP</li>
-                    <li>MySQL & Oracle</li>
-                    <li>ARM Assembly</li>
+                    <li>MySQL&nbsp;&&nbsp;Oracle</li>
+                    <li>ARM&nbsp;Assembly</li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <ul>
+                    <li class="skill-header">Frameworks</li>
                     <li>Angular</li>
                     <li>Ionic</li>
-                    <li>Spring Boot</li>
-                    <li>Spring MVC</li>
+                    <li>Spring&nbsp;Boot</li>
+                    <li>Spring&nbsp;MVC</li>
                     <li>Jersey</li>
-                    <li>JUnit & Mockito</li>
+                    <li>JUnit&nbsp;&&nbsp;Mockito</li>
                     <li>Jasmine</li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="clearfix visible-sm-block visible-xs-block"></div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <ul>
-                    <li>Apache Kafka</li>
+                    <li class="skill-header">Libraries</li>
+                    <li>Apache&nbsp;Kafka</li>
                     <li>jQuery</li>
                     <li>Bootstrap</li>
                     <li>Mongoose</li>
@@ -126,30 +112,31 @@
                     <li>Express.js</li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <ul>
+                    <li class="skill-header">Tools&nbsp;&&nbsp;Other</li>
                     <li>Git</li>
                     <li>Firebase</li>
                     <li>HTTP</li>
-                    <li>Cloud Foundry</li>
+                    <li>REST</li>
+                    <li>Cloud&nbsp;Foundry</li>
                     <li>MongoDB</li>
                     <li>Maven</li>
                     <li>UML</li>
                     <li>BPMN</li>
-                    <li>Microsoft Office</li>
+                    <li>Microsoft&nbsp;Office</li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
 <div class="row section" id="education">
-    <div class="col-lg-4 section-title">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
         <p>
             Education
         </p>
-
     </div>
-    <div class="col-lg-6 section-content">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10 section-content">
         <div class="row">
             <span id="education-school">
                 <b>University of Delaware - Class of 2018</b>
@@ -158,60 +145,57 @@
             <span id="education-major">Bachelor of Science in Computer Information Systems</span>
         </div>
         <div *ngIf="educationMoreDetails" class="row more-info-row" [@slideIn]="'in'">
-            <div class="col-lg-12 no-padding">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
                 <ul class="more-info-list">
                     <li>Cumulative GPA - 3.906</li>
                     <li>University of Delaware Scholars Scholarship Recipient</li>
                     <li>Alpha Lambda Delta Honors Society Member</li>
-
                 </ul>
                 <br>
                 <i id="courses-label">Selected Coursework:</i>
                 <br>
-                <div class="row" id="courses-header">
-                    <div class="col-lg-8">
-                        Computer Science
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                        <div class="courses-header">Computer Science</div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 courses-content">
+                            <ul>
+                                <li>Algorithms</li>
+                                <li>Artificial Intelligence</li>
+                                <li>Assembly Language</li>
+                                <li>Cloud Cryptography</li>
+                                <li>Data Structures</li>
+                                <li>Database Systems</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 courses-content">
+                            <ul>
+                                <li>Machine Learning</li>
+                                <li>Network Fundamentals</li>
+                                <li>Parallel Computing</li>
+                                <li>Secure Software Design</li>
+                                <li>Web Technologies</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-lg-4">
-                        Business
-                    </div>
-                </div>
-                <div class="row" id="courses-content">
-                    <div class="col-lg-4">
-                        <ul>
-                            <li>Algorithms</li>
-                            <li>Artificial Intelligence</li>
-                            <li>Assembly Language</li>
-                            <li>Cloud Cryptography</li>
-                            <li>Data Structures</li>
-                            <li>Database Systems</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4">
-                        <ul>
-                            <li>Machine Learning</li>
-                            <li>Network Fundamentals</li>
-                            <li>Parallel Computing</li>
-                            <li>Secure Software Design</li>
-                            <li>Web Technologies</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4">
-                        <ul>
-                            <li>Accounting</li>
-                            <li>Business Administration</li>
-                            <li>Business Operations</li>
-                            <li>Finance</li>
-                            <li>Marketing</li>
-                            <li>Statistics</li>
-                        </ul>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div class="courses-header">Business</div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 courses-content">
+                            <ul>
+                                <li>Accounting</li>
+                                <li>Business Administration</li>
+                                <li>Business Operations</li>
+                                <li>Finance</li>
+                                <li>Marketing</li>
+                                <li>Statistics</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-    <div class="col-lg-1 more-info-col">
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 more-info-col">
         <button class="more-info-button" (click)="educationClick()">
             <!-- [@slideDown]="educationMoreDetails"> -->
             <span *ngIf="!educationMoreDetails" class="material-icons">more_horiz</span>
@@ -223,10 +207,10 @@
     </div>
 </div>
 <div class="row section">
-    <div class="col-lg-4 section-title">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
         Experience
     </div>
-    <div class="col-lg-6 section-content">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
         <div class="row">
             <div class="col-lg-7" [ngClass]="{'margin-bottom': !experienceMoreDetails1 }">
                 <b>JPMorgan Chase & Co.</b>
@@ -364,10 +348,10 @@
 </div>
 
 <div class="row section">
-    <div class="col-lg-4 section-title">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
         Projects
     </div>
-    <div class="col-lg-6 section-content">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
         <div class="row project">
             <div class="col-lg-6">
                 <img class="project-image" src="/assets/angular-firebase.png">
@@ -411,7 +395,7 @@
                     Restaurant Roulette
                 </div>
                 <div class="project-description">
-                    Cross platform mobile cloud application built using Angular, Firebase, and Ionic. The app recommends nearby restaurants based
+                    Cross platform mobile cloud application built using Ionic, Angular, and Firebase. The app recommends nearby restaurants based
                     on inputted user preferences.
                 </div>
             </div>

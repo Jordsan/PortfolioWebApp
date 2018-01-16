@@ -1,6 +1,11 @@
 <div class="container-fluid" id="header-wrapper">
     <div class="row" id="header">
-        <span class="col-lg-12">
+        <div id="scroll-wrapper">
+            <a id="scroll-button" (click)="scroll()">
+                <span class="fa fa-arrow-circle-o-down"></span>
+            </a>
+        </div>
+        <span class="col-lg-12 col-md-12 col-s-12 col-xs-12">
             <div>
                 <h1 id="header-name">Jordan Michaels</h1>
                 <span id="sub-header">FULL STACK SOFTWARE ENGINEER</span>
@@ -9,6 +14,6 @@
     </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" id="main-wrapper">
     <app-home></app-home>
 </div>

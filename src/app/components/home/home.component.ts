@@ -44,7 +44,7 @@ import {
         ]),
         trigger('hoverIcon', [
             state('icon-hovered', style({
-                transform: 'scale(3.6)', opacity: 0.35
+                transform: 'scale(3.0)', opacity: 0.35
             })),
             state('icon-not-hovered', style({
                 transform: 'scale(1)', opacity: 1
