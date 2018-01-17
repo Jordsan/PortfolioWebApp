@@ -3,10 +3,10 @@
     background-image: url("/assets/header.jpeg");
     /* -webkit-filter: grayscale(25%); 
     filter: grayscale(25%);  */
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    min-height: 100vh;
     background-position: center center;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -53,6 +53,12 @@
     color: white;
     font-size: 6.0em;
     border: none;
+    outline: 0;
+    outline-offset: 0;
+    background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-appearance: none;
 }
 
 #scroll-button:hover {

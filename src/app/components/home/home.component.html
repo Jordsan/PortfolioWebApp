@@ -4,9 +4,7 @@
             <span class="material-icons info-icon">home</span>
         </div>
         <div *ngIf="hoverHomeVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="https://goo.gl/maps/XAC99K2tJ1v">
-                438 Penfield Road, Fairfield, CT, 06824
-            </a>
+            438 Penfield Road, Fairfield, CT, 06824
         </div>
     </div>
     <div id="phone-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverPhone()" (mouseleave)="hoverPhone()">
@@ -53,14 +51,12 @@
 </div>
 <div class="row hidden-lg" id="personal-info">
     <div id="home-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverHome()">
-        <div class="hover-wrapper" [ngClass]="isHovered('home')" [@hoverIcon]="isHovered('home')">
+        <span class="hover-wrapper" [ngClass]="isHovered('home')" [@hoverIcon]="isHovered('home')">
             <span class="material-icons info-icon">home</span>
-        </div>
-        <div *ngIf="hoverHomeVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="https://goo.gl/maps/XAC99K2tJ1v">
-                438 Penfield Road, Fairfield, CT, 06824
-            </a>
-        </div>
+        </span>
+        <span *ngIf="hoverHomeVal" class="hover-item" [@fadeIn]="'in'">
+            438 Penfield Road, Fairfield, CT, 06824
+        </span>
     </div>
     <div id="phone-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverPhone()">
         <div class="hover-wrapper" [ngClass]="isHovered('phone')" [@hoverIcon]="isHovered('phone')">
@@ -75,8 +71,7 @@
             <span class="material-icons info-icon">email</span>
         </div>
         <div *ngIf="hoverEmailVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels
-                <br>@gmail.com</a>
+            <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels<br>@gmail.com</a>
         </div>
     </div>
     <div id="resume-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverResume()">
