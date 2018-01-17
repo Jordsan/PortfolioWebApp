@@ -29,7 +29,9 @@
             <span class="fa fa-file-text-o info-icon"></span>
         </div>
         <div *ngIf="hoverResumeVal" class="hover-item" [@fadeIn]="'in'">
-            Resume.pdf
+            <a href="/assets/Resume.pdf" target="_blank">
+                Resume.pdf
+            </a>
         </div>
     </div>
     <div id="linkedin-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverLinkedIn()" (mouseleave)="hoverLinkedIn()">
@@ -71,7 +73,8 @@
             <span class="material-icons info-icon">email</span>
         </div>
         <div *ngIf="hoverEmailVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels<br>@gmail.com</a>
+            <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels
+                <br>@gmail.com</a>
         </div>
     </div>
     <div id="resume-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverResume()">
@@ -79,7 +82,9 @@
             <span class="fa fa-file-text-o info-icon"></span>
         </div>
         <div *ngIf="hoverResumeVal" class="hover-item" [@fadeIn]="'in'">
-            Resume.pdf
+            <a href="/assets/Resume.pdf" target="_blank">
+                Resume.pdf
+            </a>
         </div>
     </div>
     <div id="linkedin-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverLinkedIn()">
@@ -99,8 +104,6 @@
         </div>
     </div>
 </div>
-
-
 <div class="row section" id="background">
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
         background
@@ -113,6 +116,9 @@
         have an open mind to learning to work with new technologies and development environments, and enjoy taking on new
         challenges head-on. As an extremely detail oriented thinker, my goal in projects is always to create a product that
         is efficient, organized, and scalable.
+        <br>
+        <br>In my free time, I enjoy working on personal projects as well as staying up to date with the latest technologies.
+        I also spend a fair bit of time researching cryptocurrencies and growing my personal investments portfolio.
     </div>
 </div>
 <div class="row section">
@@ -163,6 +169,7 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <ul>
                     <li class="skill-header">Tools&nbsp;&&nbsp;Other</li>
+                    <li>Agile</li>
                     <li>Git</li>
                     <li>Firebase</li>
                     <li>HTTP</li>
@@ -193,7 +200,7 @@
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
         <div class="row">
-            <span id="education-school">
+            <span class="no-padding">
                 <b>University of Delaware - Class&nbsp;of&nbsp;2018</b>
             </span>
             <br>
@@ -447,6 +454,11 @@
                     <span class="technology-tag">Firebase</span>
                 </div>
             </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+                <a class="github-link" href="https://github.com/Jordsan/PortfolioWebApp" target="_blank">
+                    View Source
+                </a>
+            </div>
         </div>
         <div class="row project">
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -482,6 +494,11 @@
                     <span class="technology-tag">HTTP</span>
                     <span class="technology-tag">Google&nbsp;Places&nbsp;API</span>
                 </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+                <a class="github-link" href="https://github.com/Jordsan/restaurant-roulette" target="_blank">
+                    View Source
+                </a>
             </div>
         </div>
         <div class="row project">
@@ -519,6 +536,42 @@
                     <span class="technology-tag">Node.js</span>
                 </div>
             </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+                <a class="github-link" href="https://github.com/Jordsan/cisc474-mean-calendar-UI" target="_blank">
+                    View&nbsp;Source&nbsp;(Front&nbsp;End)
+                </a>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+                <a class="github-link" href="https://github.com/Jordsan/cisc474-mean-calendar" target="_blank">
+                    View&nbsp;Source&nbsp;(Back&nbsp;End)
+                </a>
+            </div>
+        </div>
+        <div class="row project">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <img class="project-image" src="/assets/cpp.png">
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="project-header">
+                    Markovian Tweet Generator
+                </div>
+                <div class="project-description">
+                    Tweet generator that uses Markov Chains to create messages from a user's recent tweets. Built using C++ and retrieves data
+                    from the Twitter API.
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+                <div class="technology-list no-padding">
+                    <span class="technology-tag">C++</span>
+                    <span class="technology-tag">HTTP</span>
+                    <span class="technology-tag">Twitter&nbsp;API</span>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+                <a class="github-link" href="https://github.com/Jordsan/cpeg476-markovian-tweets" target="_blank">
+                    View Source
+                </a>
+            </div>
         </div>
         <div class="row project">
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -534,11 +587,16 @@
                 </div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
-                <div class="technology-list no-padding" id="non-full-stack">
+                <div class="technology-list no-padding">
                     <span class="technology-tag">Python</span>
                     <span class="technology-tag">HTTP</span>
                     <span class="technology-tag">Coinmarketcap&nbsp;API</span>
                 </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+                <a class="github-link" href="https://github.com/Jordsan/cryptocurrency-marketcap-spreadsheet" target="_blank">
+                    View Source
+                </a>
             </div>
         </div>
     </div>

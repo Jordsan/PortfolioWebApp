@@ -70,17 +70,6 @@ export class HomeComponent implements OnInit {
         this.experienceMoreDetails = false;
     }
 
-    onClick(event) {
-        if (!this.eref.nativeElement.contains(event.target)) {
-            this.hoverHomeVal = false;
-            this.hoverPhoneVal = false;
-            this.hoverEmailVal = false;
-            this.hoverResumeVal = false;
-            this.hoverLinkedInVal = false;
-            this.hoverGithubVal = false;
-        }
-    }
-
     educationClick(): void {
         this.educationMoreDetails = !this.educationMoreDetails;
     }
