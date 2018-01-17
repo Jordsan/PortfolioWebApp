@@ -113,8 +113,7 @@
     outline: 0;
 }
 
-.more-info-button:active,
-.more-info-button:hover {
+.more-info-button:active {
     background: #2a91ff;
 }
 
@@ -139,21 +138,6 @@
     border-radius: 12px;
     color: white;
     z-index: 100;
-}
-
-.more-info-button-mobile:focus {
-    outline: 0;
-}
-
-.more-info-button-mobile:active {
-    background: #2a91ff;
-}
-
-.button-stack {
-    display: flex;
-    justify-content: flex-end;
-    height: 100%;
-    margin-bottom: 30px;
 }
 
 .more-info-list {

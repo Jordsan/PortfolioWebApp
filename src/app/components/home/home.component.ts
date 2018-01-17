@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnInit, TemplateRef, HostListener, ElementRef } from '@angular/core';
 import {
     trigger,
     state,
@@ -41,7 +41,7 @@ import {
             })),
             transition('icon-not-hovered => icon-hovered', animate('250ms ease-in')),
             transition('icon-hovered => icon-not-hovered', animate('250ms ease-out'))
-        ])
+        ]),
     ]
 })
 export class HomeComponent implements OnInit {
@@ -54,10 +54,9 @@ export class HomeComponent implements OnInit {
     hoverGithubVal: boolean;
 
     educationMoreDetails: boolean;
-    experienceMoreDetails1: boolean;
-    experienceMoreDetails2: boolean;
+    experienceMoreDetails: boolean;
 
-    constructor() { }
+    constructor(private eref: ElementRef) { }
 
     ngOnInit() {
         this.hoverHomeVal = false;
@@ -68,17 +67,26 @@ export class HomeComponent implements OnInit {
         this.hoverGithubVal = false;
 
         this.educationMoreDetails = false;
-        this.experienceMoreDetails1 = false;
-        this.experienceMoreDetails2 = false;
+        this.experienceMoreDetails = false;
+    }
+
+    onClick(event) {
+        if (!this.eref.nativeElement.contains(event.target)) {
+            this.hoverHomeVal = false;
+            this.hoverPhoneVal = false;
+            this.hoverEmailVal = false;
+            this.hoverResumeVal = false;
+            this.hoverLinkedInVal = false;
+            this.hoverGithubVal = false;
+        }
     }
 
     educationClick(): void {
         this.educationMoreDetails = !this.educationMoreDetails;
     }
 
-    experienceClickBoth(): void {
-        this.experienceMoreDetails1 = !this.experienceMoreDetails1;
-        this.experienceMoreDetails2 = !this.experienceMoreDetails2;
+    experienceClick(): void {
+        this.experienceMoreDetails = !this.experienceMoreDetails;
     }
 
     isHovered(input: string): string {

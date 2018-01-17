@@ -3,7 +3,7 @@
     background-image: url("/assets/header.jpeg");
     /* -webkit-filter: grayscale(25%); 
     filter: grayscale(25%);  */
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     min-height: 100vh;
     background-position: center center;
@@ -28,7 +28,7 @@
 }
 
 #header-name {
-    margin-top: 15%;
+    margin-top: 10%;
     font-weight: 500;
     font-size: 4.6em;
     letter-spacing: 2px;

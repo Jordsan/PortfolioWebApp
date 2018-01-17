@@ -1,13 +1,12 @@
-<div class="row" id="personal-info">
+<div class="row visible-lg-block" id="personal-info">
     <div id="home-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverHome()" (mouseleave)="hoverHome()">
         <div class="hover-wrapper" [ngClass]="isHovered('home')" [@hoverIcon]="isHovered('home')">
             <span class="material-icons info-icon">home</span>
         </div>
         <div *ngIf="hoverHomeVal" class="hover-item" [@fadeIn]="'in'">
-            <!-- <a href="https://goo.gl/maps/XAC99K2tJ1v">
-                    438 Penfield Road, Fairfield, CT, 06824
-                </a> -->
-            438 Penfield Road, Fairfield, CT, 06824
+            <a href="https://goo.gl/maps/XAC99K2tJ1v">
+                438 Penfield Road, Fairfield, CT, 06824
+            </a>
         </div>
     </div>
     <div id="phone-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverPhone()" (mouseleave)="hoverPhone()">
@@ -52,6 +51,60 @@
         </div>
     </div>
 </div>
+<div class="row hidden-lg" id="personal-info">
+    <div id="home-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverHome()">
+        <div class="hover-wrapper" [ngClass]="isHovered('home')" [@hoverIcon]="isHovered('home')">
+            <span class="material-icons info-icon">home</span>
+        </div>
+        <div *ngIf="hoverHomeVal" class="hover-item" [@fadeIn]="'in'">
+            <a href="https://goo.gl/maps/XAC99K2tJ1v">
+                438 Penfield Road, Fairfield, CT, 06824
+            </a>
+        </div>
+    </div>
+    <div id="phone-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverPhone()">
+        <div class="hover-wrapper" [ngClass]="isHovered('phone')" [@hoverIcon]="isHovered('phone')">
+            <span class="material-icons info-icon">phone</span>
+        </div>
+        <div *ngIf="hoverPhoneVal" class="hover-item" [@fadeIn]="'in'">
+            203-727-3656
+        </div>
+    </div>
+    <div id="email-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverEmail()">
+        <div class="hover-wrapper" [ngClass]="isHovered('email')" [@hoverIcon]="isHovered('email')">
+            <span class="material-icons info-icon">email</span>
+        </div>
+        <div *ngIf="hoverEmailVal" class="hover-item" [@fadeIn]="'in'">
+            <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels
+                <br>@gmail.com</a>
+        </div>
+    </div>
+    <div id="resume-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverResume()">
+        <div class="hover-wrapper" [ngClass]="isHovered('resume')" [@hoverIcon]="isHovered('resume')">
+            <span class="fa fa-file-text-o info-icon"></span>
+        </div>
+        <div *ngIf="hoverResumeVal" class="hover-item" [@fadeIn]="'in'">
+            Resume.pdf
+        </div>
+    </div>
+    <div id="linkedin-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverLinkedIn()">
+        <div class="hover-wrapper" [ngClass]="isHovered('linkedin')" [@hoverIcon]="isHovered('linkedin')">
+            <span class="fa fa-linkedin-square info-icon"></span>
+        </div>
+        <div *ngIf="hoverLinkedInVal" class="hover-item" [@fadeIn]="'in'">
+            <a href="https://www.linkedin.com/in/jordan-michaels-589385149/">Jordan Michaels</a>
+        </div>
+    </div>
+    <div id="github-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverGithub()">
+        <div class="hover-wrapper" [ngClass]="isHovered('github')" [@hoverIcon]="isHovered('github')">
+            <span class="fa fa-github info-icon"></span>
+        </div>
+        <div *ngIf="hoverGithubVal" class="hover-item" [@fadeIn]="'in'">
+            <a href="https://github.com/Jordsan">Jordsan</a>
+        </div>
+    </div>
+</div>
+
 
 <div class="row section" id="background">
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
@@ -229,10 +282,10 @@
         Experience
     </div>
     <div class="col-xs-6 visible-xs-block">
-        <button class="more-info-button" (click)="experienceClickBoth()">
+        <button class="more-info-button" (click)="experienceClick()">
             <span class="more-button-text">More Details</span>
-            <span *ngIf="!experienceMoreDetails1" class="material-icons more-button-icon">arrow_drop_down</span>
-            <span *ngIf="experienceMoreDetails1" class="material-icons more-button-icon">arrow_drop_up</span>
+            <span *ngIf="!experienceMoreDetails" class="material-icons more-button-icon">arrow_drop_down</span>
+            <span *ngIf="experienceMoreDetails" class="material-icons more-button-icon">arrow_drop_up</span>
         </button>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
@@ -249,7 +302,7 @@
                 June 2017 - Dec 2017
             </div>
         </div>
-        <div *ngIf="experienceMoreDetails1" class="row experience-row" [@slideIn]="'in'">
+        <div *ngIf="experienceMoreDetails" class="row experience-row" [@slideIn]="'in'">
             <div class="col-lg-12 col-md-12-col-sm-12 col-xs-12 no-padding">
                 <div class="experience-project">
                     <div class="experience-detail-header">
@@ -341,7 +394,7 @@
                 June 2014 - Aug 2016
             </div>
         </div>
-        <div *ngIf="experienceMoreDetails2" class="row experience-row" [@slideIn]="'in'">
+        <div *ngIf="experienceMoreDetails" class="row experience-row" [@slideIn]="'in'">
             <div class="col-lg-12 col-md-12-col-sm-12 col-xs-12 no-padding">
                 <ul class="more-info-list">
                     <li>Created an online company catalog-webstore to increase efficiency of orders by eliminating manual processing
@@ -353,10 +406,10 @@
         </div>
     </div>
     <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs more-info-col">
-        <button class="more-info-button" (click)="experienceClickBoth()">
+        <button class="more-info-button" (click)="experienceClick()">
             <span class="more-button-text">More&nbsp;Details</span>
-            <span *ngIf="!educationMoreDetails" class="material-icons more-button-icon">arrow_drop_down</span>
-            <span *ngIf="educationMoreDetails" class="material-icons more-button-icon">arrow_drop_up</span>
+            <span *ngIf="!experienceMoreDetails" class="material-icons more-button-icon">arrow_drop_down</span>
+            <span *ngIf="experienceMoreDetails" class="material-icons more-button-icon">arrow_drop_up</span>
         </button>
     </div>
 </div>
