@@ -20,7 +20,8 @@
             <span class="material-icons info-icon">email</span>
         </div>
         <div *ngIf="hoverEmailVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels<br>@gmail.com</a>
+            <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels
+                <br>@gmail.com</a>
         </div>
     </div>
     <div id="resume-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverResume()" (mouseleave)="hoverResume()">
@@ -72,7 +73,8 @@
             <span class="material-icons info-icon">email</span>
         </div>
         <div *ngIf="hoverEmailVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels<br>@gmail.com</a>
+            <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels
+                <br>@gmail.com</a>
         </div>
     </div>
     <div id="resume-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverResume()">
@@ -419,6 +421,41 @@
         Projects
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
+        <div class="row project">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <img class="project-image" src="/assets/ionic.svg">
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="project-header">
+                    eCard
+                </div>
+                <div class="project-description">
+                    Cross platform mobile cloud application built using Ionic, Angular, and Firebase. The app allows users to create an
+                    electronic business card and connect with others using Near Field Communication.
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+                    Front End
+                </div>
+                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
+                    <span class="technology-tag">Ionic</span>
+                    <span class="technology-tag">Angular</span>
+                    <span class="technology-tag">HTML</span>
+                    <span class="technology-tag">SCSS</span>
+                    <span class="technology-tag">Typescript</span>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+                    Back End
+                </div>
+                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
+                    <span class="technology-tag">Firebase</span>
+                    <span class="technology-tag">HTTP</span>
+                </div>
+            </div>
+        </div>
         <div class="row project">
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <img class="project-image" src="/assets/angular-firebase.png">
