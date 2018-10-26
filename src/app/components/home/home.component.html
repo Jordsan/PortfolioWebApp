@@ -92,7 +92,7 @@
             <span class="fa fa-linkedin-square info-icon"></span>
         </div>
         <div *ngIf="hoverLinkedInVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="https://www.linkedin.com/in/jordan-michaels-589385149/" target="_blank">Jordan Michaels</a>
+            <a href="https://www.linkedin.com/in/jordswan/" target="_blank">Jordan Michaels</a>
         </div>
     </div>
     <div id="github-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverGithub()">
@@ -131,12 +131,14 @@
                 <ul>
                     <li class="skill-header">Languages</li>
                     <li>Java</li>
-                    <li>Javascript</li>
+                    <li>Javascript (ES6)</li>
                     <li>Typescript</li>
                     <li>HTML</li>
                     <li>CSS&nbsp;&&nbsp;SCSS</li>
+                    <li>Progress OpenEdge</li>
                     <li>Python</li>
-                    <li>C&nbsp;&&nbsp;C++</li>
+                    <li>C++</li>
+                    <li>C</li>
                     <li>PHP</li>
                     <li>MySQL&nbsp;&&nbsp;Oracle</li>
                     <li>ARM&nbsp;Assembly</li>
@@ -145,11 +147,11 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <ul>
                     <li class="skill-header">Frameworks</li>
-                    <li>Angular</li>
+                    <li>Angular 2+</li>
+                    <li>AngularJS</li>
                     <li>Ionic</li>
                     <li>Spring&nbsp;Boot</li>
                     <li>Spring&nbsp;MVC</li>
-                    <li>Jersey</li>
                     <li>JUnit&nbsp;&&nbsp;Mockito</li>
                     <li>Jasmine</li>
                 </ul>
@@ -158,18 +160,23 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <ul>
                     <li class="skill-header">Libraries</li>
+                    <li>React</li>
+                    <li>React&nbsp;Native</li>
                     <li>Apache&nbsp;Kafka</li>
                     <li>jQuery</li>
                     <li>Bootstrap</li>
-                    <li>Mongoose</li>
+                    <li>MongooseJS</li>
                     <li>Node.js</li>
                     <li>Express.js</li>
+                    <li>JAX-RS Jersey</li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                 <ul>
                     <li class="skill-header">Tools&nbsp;&&nbsp;Other</li>
                     <li>Agile</li>
+                    <li>Scrum</li>
+                    <li>Kanban</li>
                     <li>Git</li>
                     <li>Firebase</li>
                     <li>HTTP</li>
@@ -177,6 +184,7 @@
                     <li>Cloud&nbsp;Foundry</li>
                     <li>MongoDB</li>
                     <li>Maven</li>
+                    <li>Unix</li>
                     <li>UML</li>
                     <li>BPMN</li>
                     <li>Microsoft&nbsp;Office</li>
@@ -209,9 +217,11 @@
         <div *ngIf="educationMoreDetails" class="row more-info-row" [@slideIn]="'in'">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
                 <ul class="more-info-list">
-                    <li>Cumulative GPA - 3.906</li>
-                    <li>University of Delaware Scholars Scholarship Recipient</li>
-                    <li>Alpha Lambda Delta Honors Society Member</li>
+                    <li class="one-liner">Cumulative GPA - 3.906</li>
+                    <li class="hidden-lg hidden-md">University of Delaware Scholars Scholarship Recipient</li>
+                    <li class="one-liner hidden-sm hidden-xs">University of Delaware Scholars Scholarship Recipient</li>
+                    <li class="hidden-lg hidden-md">Alpha Lambda Delta Honors Society Member</li>
+                    <li class="one-liner hidden-sm hidden-xs">Alpha Lambda Delta Honors Society Member</li>
                 </ul>
                 <br>
                 <i id="courses-label">Selected Coursework:</i>
@@ -295,13 +305,46 @@
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" [ngClass]="{'margin-bottom': !experienceMoreDetails }">
                 <b>JPMorgan Chase & Co.</b>
                 <br>
-                <span>Technology Analyst Intern</span>
+                <span>Software Engineer</span>
                 <div class="visible-sm-block visible-xs-block experience-date">
-                    June 2017 - Dec 2017
+                    July 2018 - Present
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 hidden-sm hidden-xs experience-date">
-                June 2017 - Dec 2017
+                July 2018 - Present
+            </div>
+        </div>
+        <div *ngIf="experienceMoreDetails" class="row experience-row" [@slideIn]="'in'">
+            <div class="col-lg-12 col-md-12-col-sm-12 col-xs-12 no-padding">
+                <div class="experience-project">
+                    <div class="experience-detail-header">
+                        Home Lending Ecosystem Developer
+                    </div>
+                    <ul class="more-info-list">
+                        <li class="hidden-lg">Member of a T-Shaped Agile team in the Home Lending ecosystem</li>                        
+                        <li class="one-liner hidden-md hidden-sm hidden-xs">Member of a T-Shaped Agile team in the Home Lending ecosystem</li>
+                        <li>Developed features to meet new business requirements for updates to Home Lending 
+                            applications using Progress OpenEdge
+                        </li>
+                        <li class="hidden-lg">Performed QA testing on code written to ensure all requirements are met</li>                        
+                        <li class="one-liner hidden-md hidden-sm hidden-xs">Performed QA testing on code written to ensure all requirements are met</li>
+                        <li class="hidden-lg">Wrote & groomed stories, partook in code reviews, & helped in sprint planning</li>                        
+                        <li class="one-liner hidden-md hidden-sm hidden-xs">Wrote & groomed stories, partook in code reviews, & helped in sprint planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" [ngClass]="{'margin-bottom': !experienceMoreDetails }">
+                <b>JPMorgan Chase & Co.</b>
+                <br>
+                <span>Technology Analyst Intern</span>
+                <div class="visible-sm-block visible-xs-block experience-date">
+                    June 2017 - May 2018
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs experience-date">
+                June 2017 - May 2018
             </div>
         </div>
         <div *ngIf="experienceMoreDetails" class="row experience-row" [@slideIn]="'in'">
@@ -311,7 +354,8 @@
                         Full Stack Web Portal
                     </div>
                     <ul class="more-info-list">
-                        <li>Created a full stack, cloud based web portal for updates on future project information</li>
+                        <li class="hidden-lg">Created a full stack, cloud based web portal for updates on future project information</li>
+                        <li class="one-liner hidden-md hidden-sm hidden-xs">Created a full stack, cloud based web portal for updates on future project information</li>
                         <li>Implemented a self-service paradigm, allowing for role-based access to CRUD functionality of website
                             content
                         </li>
@@ -348,7 +392,8 @@
                         Support Agent Status Widget
                     </div>
                     <ul class="more-info-list">
-                        <li>Worked in an 8-person scrum team with 3 week sprints following Agile/Scrum methodologies</li>
+                        <li class="hidden-lg">Worked in an 8-person scrum team with 3 week sprints following Agile/Scrum methodologies</li>
+                        <li class="one-liner hidden-md hidden-sm hidden-xs">Worked in an 8-person scrum team with 3 week sprints following Agile/Scrum methodologies</li>
                         <li>Developed cloud based RESTful web micro-service leveraging a Kafka event stream for communication
                             between the client & server
                         </li>
@@ -401,8 +446,10 @@
                 <ul class="more-info-list">
                     <li>Created an online company catalog-webstore to increase efficiency of orders by eliminating manual processing
                         of the transactions</li>
-                    <li>Processed purchase and sales orders of products for corporations across the country</li>
-                    <li>Actively communicated with customers to ensure complete customer satisfaction</li>
+                    <li class="hidden-lg">Processed purchase and sales orders of products for corporations across the country</li>
+                    <li class="one-liner hidden-md hidden-sm hidden-xs">Processed purchase and sales orders of products for corporations across the country</li>
+                    <li class="hidden-lg">Actively communicated with customers to ensure complete customer satisfaction</li>
+                    <li class="one-liner hidden-md hidden-sm hidden-xs">Actively communicated with customers to ensure complete customer satisfaction</li>
                 </ul>
             </div>
         </div>
@@ -423,15 +470,47 @@
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
         <div class="row project">
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <img class="project-image" src="/assets/ionic.svg">
+                <img class="project-image" src="/assets/react-native.jpeg">
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div class="project-header">
-                    eCard
+                    Exchange
                 </div>
                 <div class="project-description">
-                    Cross platform mobile cloud application built using Ionic, Angular, and Firebase. The app allows users to create an
+                    Cross platform mobile cloud application built using React Native and Firebase. The app allows users to create an
                     electronic business card and connect with others using Near Field Communication.
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+                    Front End
+                </div>
+                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
+                    <span class="technology-tag">React Native</span>
+                    <span class="technology-tag">Javascript</span>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+                    Back End
+                </div>
+                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
+                    <span class="technology-tag">Firebase</span>
+                    <span class="technology-tag">HTTP</span>
+                </div>
+            </div>
+        </div>
+        <div class="row project">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <img class="project-image" src="/assets/crypto.jpg">
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="project-header">
+                    Local Coin
+                </div>
+                <div class="project-description">
+                    Cryptocurrency proof of concept developed for one of my college professors.
+                    Built core blockchain using C++, transaction server using NodeJS + ExpressJS, & an Ionic mobile app for conducting transactions.
                 </div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
@@ -451,9 +530,25 @@
                     Back End
                 </div>
                 <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                    <span class="technology-tag">Firebase</span>
-                    <span class="technology-tag">HTTP</span>
+                    <span class="technology-tag">C++</span>
+                    <span class="technology-tag">NodeJS</span>
+                    <span class="technology-tag">ExpressJS</span>
                 </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+                <a class="github-link" href="https://github.com/Jordsan/LocalCoin-Core" target="_blank">
+                    View&nbsp;Source&nbsp;(Core)
+                </a>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+                <a class="github-link" href="https://github.com/Jordsan/LocalCoin-Server" target="_blank">
+                    View&nbsp;Source&nbsp;(Transaction&nbsp;Server)
+                </a>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+                <a class="github-link" href="https://github.com/Jordsan/LocalCoin-Mobile" target="_blank">
+                    View&nbsp;Source&nbsp;(Mobile&nbsp;App)
+                </a>
             </div>
         </div>
         <div class="row project">
