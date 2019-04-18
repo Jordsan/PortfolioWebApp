@@ -1,733 +1,1092 @@
 <div class="row visible-lg-block" id="personal-info">
-    <div id="home-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverHome()" (mouseleave)="hoverHome()">
-        <div class="hover-wrapper" [ngClass]="isHovered('home')" [@hoverIcon]="isHovered('home')">
-            <span class="material-icons info-icon">home</span>
-        </div>
-        <div *ngIf="hoverHomeVal" class="hover-item" [@fadeIn]="'in'">
-            438 Penfield Road, Fairfield, CT, 06824
-        </div>
+  <div
+    id="home-hover"
+    class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6"
+    (mouseenter)="hoverHome()"
+    (mouseleave)="hoverHome()"
+  >
+    <div
+      class="hover-wrapper"
+      [ngClass]="isHovered('home')"
+      [@hoverIcon]="isHovered('home')"
+    >
+      <span class="material-icons info-icon">home</span>
     </div>
-    <div id="phone-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverPhone()" (mouseleave)="hoverPhone()">
-        <div class="hover-wrapper" [ngClass]="isHovered('phone')" [@hoverIcon]="isHovered('phone')">
-            <span class="material-icons info-icon">phone</span>
-        </div>
-        <div *ngIf="hoverPhoneVal" class="hover-item" [@fadeIn]="'in'">
-            203-727-3656
-        </div>
+    <div *ngIf="hoverHomeVal" class="hover-item" [@fadeIn]="'in'">
+      438 Penfield Road, Fairfield, CT, 06824
     </div>
-    <div id="email-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverEmail()" (mouseleave)="hoverEmail()">
-        <div class="hover-wrapper" [ngClass]="isHovered('email')" [@hoverIcon]="isHovered('email')">
-            <span class="material-icons info-icon">email</span>
-        </div>
-        <div *ngIf="hoverEmailVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels
-                <br>@gmail.com</a>
-        </div>
+  </div>
+  <div
+    id="phone-hover"
+    class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6"
+    (mouseenter)="hoverPhone()"
+    (mouseleave)="hoverPhone()"
+  >
+    <div
+      class="hover-wrapper"
+      [ngClass]="isHovered('phone')"
+      [@hoverIcon]="isHovered('phone')"
+    >
+      <span class="material-icons info-icon">phone</span>
     </div>
-    <div id="resume-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverResume()" (mouseleave)="hoverResume()">
-        <div class="hover-wrapper" [ngClass]="isHovered('resume')" [@hoverIcon]="isHovered('resume')">
-            <span class="fa fa-file-text-o info-icon"></span>
-        </div>
-        <div *ngIf="hoverResumeVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="/assets/Resume.pdf" target="_blank">
-                Resume.pdf
-            </a>
-        </div>
+    <div *ngIf="hoverPhoneVal" class="hover-item" [@fadeIn]="'in'">
+      203-727-3656
     </div>
-    <div id="linkedin-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverLinkedIn()" (mouseleave)="hoverLinkedIn()">
-        <div class="hover-wrapper" [ngClass]="isHovered('linkedin')" [@hoverIcon]="isHovered('linkedin')">
-            <span class="fa fa-linkedin-square info-icon"></span>
-        </div>
-        <div *ngIf="hoverLinkedInVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="https://www.linkedin.com/in/jordan-michaels-589385149/" target="_blank">Jordan Michaels</a>
-        </div>
+  </div>
+  <div
+    id="email-hover"
+    class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6"
+    (mouseenter)="hoverEmail()"
+    (mouseleave)="hoverEmail()"
+  >
+    <div
+      class="hover-wrapper"
+      [ngClass]="isHovered('email')"
+      [@hoverIcon]="isHovered('email')"
+    >
+      <span class="material-icons info-icon">email</span>
     </div>
-    <div id="github-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (mouseenter)="hoverGithub()" (mouseleave)="hoverGithub()">
-        <div class="hover-wrapper" [ngClass]="isHovered('github')" [@hoverIcon]="isHovered('github')">
-            <span class="fa fa-github info-icon"></span>
-        </div>
-        <div *ngIf="hoverGithubVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="https://github.com/Jordsan" target="_blank">Jordsan</a>
-        </div>
+    <div *ngIf="hoverEmailVal" class="hover-item" [@fadeIn]="'in'">
+      <a href="mailto:mail.jordan.michaels@gmail.com"
+        >mail.jordan.michaels <br />@gmail.com</a
+      >
     </div>
+  </div>
+  <div
+    id="resume-hover"
+    class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6"
+    (mouseenter)="hoverResume()"
+    (mouseleave)="hoverResume()"
+  >
+    <div
+      class="hover-wrapper"
+      [ngClass]="isHovered('resume')"
+      [@hoverIcon]="isHovered('resume')"
+    >
+      <span class="fa fa-file-text-o info-icon"></span>
+    </div>
+    <div *ngIf="hoverResumeVal" class="hover-item" [@fadeIn]="'in'">
+      <a href="/assets/Resume.pdf" target="_blank">
+        Resume.pdf
+      </a>
+    </div>
+  </div>
+  <div
+    id="linkedin-hover"
+    class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6"
+    (mouseenter)="hoverLinkedIn()"
+    (mouseleave)="hoverLinkedIn()"
+  >
+    <div
+      class="hover-wrapper"
+      [ngClass]="isHovered('linkedin')"
+      [@hoverIcon]="isHovered('linkedin')"
+    >
+      <span class="fa fa-linkedin-square info-icon"></span>
+    </div>
+    <div *ngIf="hoverLinkedInVal" class="hover-item" [@fadeIn]="'in'">
+      <a
+        href="https://www.linkedin.com/in/jordan-michaels-589385149/"
+        target="_blank"
+        >Jordan Michaels</a
+      >
+    </div>
+  </div>
+  <div
+    id="github-hover"
+    class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6"
+    (mouseenter)="hoverGithub()"
+    (mouseleave)="hoverGithub()"
+  >
+    <div
+      class="hover-wrapper"
+      [ngClass]="isHovered('github')"
+      [@hoverIcon]="isHovered('github')"
+    >
+      <span class="fa fa-github info-icon"></span>
+    </div>
+    <div *ngIf="hoverGithubVal" class="hover-item" [@fadeIn]="'in'">
+      <a href="https://github.com/Jordsan" target="_blank">Jordsan</a>
+    </div>
+  </div>
 </div>
 <div class="row hidden-lg" id="personal-info">
-    <div id="home-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverHome()">
-        <span class="hover-wrapper" [ngClass]="isHovered('home')" [@hoverIcon]="isHovered('home')">
-            <span class="material-icons info-icon">home</span>
-        </span>
-        <span *ngIf="hoverHomeVal" class="hover-item" [@fadeIn]="'in'">
-            438 Penfield Road, Fairfield, CT, 06824
-        </span>
+  <div
+    id="home-hover"
+    class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6"
+    (click)="hoverHome()"
+  >
+    <span
+      class="hover-wrapper"
+      [ngClass]="isHovered('home')"
+      [@hoverIcon]="isHovered('home')"
+    >
+      <span class="material-icons info-icon">home</span>
+    </span>
+    <span *ngIf="hoverHomeVal" class="hover-item" [@fadeIn]="'in'">
+      438 Penfield Road, Fairfield, CT, 06824
+    </span>
+  </div>
+  <div
+    id="phone-hover"
+    class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6"
+    (click)="hoverPhone()"
+  >
+    <div
+      class="hover-wrapper"
+      [ngClass]="isHovered('phone')"
+      [@hoverIcon]="isHovered('phone')"
+    >
+      <span class="material-icons info-icon">phone</span>
     </div>
-    <div id="phone-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverPhone()">
-        <div class="hover-wrapper" [ngClass]="isHovered('phone')" [@hoverIcon]="isHovered('phone')">
-            <span class="material-icons info-icon">phone</span>
-        </div>
-        <div *ngIf="hoverPhoneVal" class="hover-item" [@fadeIn]="'in'">
-            203-727-3656
-        </div>
+    <div *ngIf="hoverPhoneVal" class="hover-item" [@fadeIn]="'in'">
+      203-727-3656
     </div>
-    <div id="email-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverEmail()">
-        <div class="hover-wrapper" [ngClass]="isHovered('email')" [@hoverIcon]="isHovered('email')">
-            <span class="material-icons info-icon">email</span>
-        </div>
-        <div *ngIf="hoverEmailVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="mailto:mail.jordan.michaels@gmail.com">mail.jordan.michaels
-                <br>@gmail.com</a>
-        </div>
+  </div>
+  <div
+    id="email-hover"
+    class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6"
+    (click)="hoverEmail()"
+  >
+    <div
+      class="hover-wrapper"
+      [ngClass]="isHovered('email')"
+      [@hoverIcon]="isHovered('email')"
+    >
+      <span class="material-icons info-icon">email</span>
     </div>
-    <div id="resume-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverResume()">
-        <div class="hover-wrapper" [ngClass]="isHovered('resume')" [@hoverIcon]="isHovered('resume')">
-            <span class="fa fa-file-text-o info-icon"></span>
-        </div>
-        <div *ngIf="hoverResumeVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="/assets/Resume.pdf" target="_blank">
-                Resume.pdf
-            </a>
-        </div>
+    <div *ngIf="hoverEmailVal" class="hover-item" [@fadeIn]="'in'">
+      <a href="mailto:mail.jordan.michaels@gmail.com"
+        >mail.jordan.michaels <br />@gmail.com</a
+      >
     </div>
-    <div id="linkedin-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverLinkedIn()">
-        <div class="hover-wrapper" [ngClass]="isHovered('linkedin')" [@hoverIcon]="isHovered('linkedin')">
-            <span class="fa fa-linkedin-square info-icon"></span>
-        </div>
-        <div *ngIf="hoverLinkedInVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="https://www.linkedin.com/in/jordswan/" target="_blank">Jordan Michaels</a>
-        </div>
+  </div>
+  <div
+    id="resume-hover"
+    class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6"
+    (click)="hoverResume()"
+  >
+    <div
+      class="hover-wrapper"
+      [ngClass]="isHovered('resume')"
+      [@hoverIcon]="isHovered('resume')"
+    >
+      <span class="fa fa-file-text-o info-icon"></span>
     </div>
-    <div id="github-hover" class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6" (click)="hoverGithub()">
-        <div class="hover-wrapper" [ngClass]="isHovered('github')" [@hoverIcon]="isHovered('github')">
-            <span class="fa fa-github info-icon"></span>
-        </div>
-        <div *ngIf="hoverGithubVal" class="hover-item" [@fadeIn]="'in'">
-            <a href="https://github.com/Jordsan" target="_blank">Jordsan</a>
-        </div>
+    <div *ngIf="hoverResumeVal" class="hover-item" [@fadeIn]="'in'">
+      <a href="/assets/Resume.pdf" target="_blank">
+        Resume.pdf
+      </a>
     </div>
+  </div>
+  <div
+    id="linkedin-hover"
+    class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6"
+    (click)="hoverLinkedIn()"
+  >
+    <div
+      class="hover-wrapper"
+      [ngClass]="isHovered('linkedin')"
+      [@hoverIcon]="isHovered('linkedin')"
+    >
+      <span class="fa fa-linkedin-square info-icon"></span>
+    </div>
+    <div *ngIf="hoverLinkedInVal" class="hover-item" [@fadeIn]="'in'">
+      <a href="https://www.linkedin.com/in/jordswan/" target="_blank"
+        >Jordan Michaels</a
+      >
+    </div>
+  </div>
+  <div
+    id="github-hover"
+    class="hover-border col-lg-2 col-md-4 col-sm-4 col-xs-6"
+    (click)="hoverGithub()"
+  >
+    <div
+      class="hover-wrapper"
+      [ngClass]="isHovered('github')"
+      [@hoverIcon]="isHovered('github')"
+    >
+      <span class="fa fa-github info-icon"></span>
+    </div>
+    <div *ngIf="hoverGithubVal" class="hover-item" [@fadeIn]="'in'">
+      <a href="https://github.com/Jordsan" target="_blank">Jordsan</a>
+    </div>
+  </div>
 </div>
 <div class="row section" id="background">
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
-        background
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content" id="background-content">
-        I am a full-stack software engineer with a passion for continually learning. Currently I am a Software Engineer for
-        JPMorgan Chase & Co. in Wilmington, DE. I graduated from University of Delaware in May 2018 with a B.S in Computer Information Systems.
-        <br>
-        <br> With experience in both front-end and back-end development, I am comfortable working around the full stack. I always
-        have an open mind to learning to work with new technologies and development environments, and enjoy taking on new
-        challenges head-on. As an extremely detail oriented thinker, my goal in projects is always to create a product that
-        is efficient, organized, and scalable.
-        <br>
-        <br>In my free time, I enjoy working on personal projects as well as staying up to date with the latest technologies.
-        I also spend a fair bit of time researching cryptocurrencies and growing my personal investments portfolio.
-    </div>
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
+    background
+  </div>
+  <div
+    class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content"
+    id="background-content"
+  >
+    I am a full-stack software engineer with a passion for continually learning.
+    Currently I am a Software Engineer for JPMorgan Chase & Co. in Wilmington,
+    DE. I graduated from University of Delaware in May 2018 with a B.S in
+    Computer Information Systems.
+    <br />
+    <br />
+    With experience in both front-end and back-end development, I am comfortable
+    working around the full stack. I always have an open mind to learning to
+    work with new technologies and development environments, and enjoy taking on
+    new challenges head-on. As an extremely detail oriented thinker, my goal in
+    projects is always to create a product that is efficient, organized, and
+    scalable.
+    <br />
+    <br />In my free time, I enjoy working on personal projects as well as
+    staying up to date with the latest technologies. I also spend a fair bit of
+    time researching cryptocurrencies and growing my personal investments
+    portfolio.
+  </div>
 </div>
 <div class="row section">
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
-        Skills
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
+    Skills
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
+    <div class="row" id="skill-content">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <ul>
+          <li class="skill-header">Languages</li>
+          <li>Java</li>
+          <li>Javascript (ES6)</li>
+          <li>Typescript</li>
+          <li>HTML</li>
+          <li>CSS&nbsp;&&nbsp;SCSS</li>
+          <li>Progress OpenEdge</li>
+          <li>Python</li>
+          <li>C++</li>
+          <li>C</li>
+          <li>PHP</li>
+          <li>MySQL&nbsp;&&nbsp;Oracle</li>
+          <li>ARM&nbsp;Assembly</li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <ul>
+          <li class="skill-header">Frameworks</li>
+          <li>Angular 2+</li>
+          <li>AngularJS</li>
+          <li>Ionic</li>
+          <li>Spring&nbsp;Boot</li>
+          <li>Spring&nbsp;MVC</li>
+          <li>JUnit&nbsp;&&nbsp;Mockito</li>
+          <li>Jasmine</li>
+        </ul>
+      </div>
+      <div class="clearfix visible-sm-block visible-xs-block"></div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <ul>
+          <li class="skill-header">Libraries</li>
+          <li>React</li>
+          <li>React&nbsp;Native</li>
+          <li>Apache&nbsp;Kafka</li>
+          <li>Selenium</li>
+          <li>jQuery</li>
+          <li>Bootstrap</li>
+          <li>MongooseJS</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>JAX-RS Jersey</li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <ul>
+          <li class="skill-header">Tools&nbsp;&&nbsp;Other</li>
+          <li>Agile</li>
+          <li>Scrum</li>
+          <li>Kanban</li>
+          <li>Git</li>
+          <li>Firebase</li>
+          <li>HTTP</li>
+          <li>REST</li>
+          <li>Cloud&nbsp;Foundry</li>
+          <li>MongoDB</li>
+          <li>Maven</li>
+          <li>Unix</li>
+          <li>UML</li>
+          <li>BPMN</li>
+          <li>Microsoft&nbsp;Office</li>
+        </ul>
+      </div>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
-        <div class="row" id="skill-content">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <ul>
-                    <li class="skill-header">Languages</li>
-                    <li>Java</li>
-                    <li>Javascript (ES6)</li>
-                    <li>Typescript</li>
-                    <li>HTML</li>
-                    <li>CSS&nbsp;&&nbsp;SCSS</li>
-                    <li>Progress OpenEdge</li>
-                    <li>Python</li>
-                    <li>C++</li>
-                    <li>C</li>
-                    <li>PHP</li>
-                    <li>MySQL&nbsp;&&nbsp;Oracle</li>
-                    <li>ARM&nbsp;Assembly</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <ul>
-                    <li class="skill-header">Frameworks</li>
-                    <li>Angular 2+</li>
-                    <li>AngularJS</li>
-                    <li>Ionic</li>
-                    <li>Spring&nbsp;Boot</li>
-                    <li>Spring&nbsp;MVC</li>
-                    <li>JUnit&nbsp;&&nbsp;Mockito</li>
-                    <li>Jasmine</li>
-                </ul>
-            </div>
-            <div class="clearfix visible-sm-block visible-xs-block"></div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <ul>
-                    <li class="skill-header">Libraries</li>
-                    <li>React</li>
-                    <li>React&nbsp;Native</li>
-                    <li>Apache&nbsp;Kafka</li>
-                    <li>jQuery</li>
-                    <li>Bootstrap</li>
-                    <li>MongooseJS</li>
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                    <li>JAX-RS Jersey</li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                <ul>
-                    <li class="skill-header">Tools&nbsp;&&nbsp;Other</li>
-                    <li>Agile</li>
-                    <li>Scrum</li>
-                    <li>Kanban</li>
-                    <li>Git</li>
-                    <li>Firebase</li>
-                    <li>HTTP</li>
-                    <li>REST</li>
-                    <li>Cloud&nbsp;Foundry</li>
-                    <li>MongoDB</li>
-                    <li>Maven</li>
-                    <li>Unix</li>
-                    <li>UML</li>
-                    <li>BPMN</li>
-                    <li>Microsoft&nbsp;Office</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 <div class="row section" id="education">
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 section-title">
-        <p>
-            Education
-        </p>
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 section-title">
+    <p>
+      Education
+    </p>
+  </div>
+  <div class="col-xs-6 visible-xs-block">
+    <button class="more-info-button" (click)="educationClick()">
+      <span class="more-button-text">More Details</span>
+      <span
+        *ngIf="!educationMoreDetails"
+        class="material-icons more-button-icon"
+        >arrow_drop_down</span
+      >
+      <span *ngIf="educationMoreDetails" class="material-icons more-button-icon"
+        >arrow_drop_up</span
+      >
+    </button>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
+    <div class="row">
+      <span class="no-padding">
+        <b>University of Delaware – Class&nbsp;of&nbsp;2018</b>
+      </span>
+      <br />
+      <span id="education-major"
+        >Bachelor of Science in Computer Information Systems</span
+      >
     </div>
-    <div class="col-xs-6 visible-xs-block">
-        <button class="more-info-button" (click)="educationClick()">
-            <span class="more-button-text">More Details</span>
-            <span *ngIf="!educationMoreDetails" class="material-icons more-button-icon">arrow_drop_down</span>
-            <span *ngIf="educationMoreDetails" class="material-icons more-button-icon">arrow_drop_up</span>
-        </button>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
+    <div
+      *ngIf="educationMoreDetails"
+      class="row more-info-row"
+      [@slideIn]="'in'"
+    >
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+        <ul class="more-info-list">
+          <li class="hidden-lg hidden-md">
+            Cumulative GPA: 3.9 – Magna Cum Laude
+          </li>
+          <li class="one-liner hidden-sm hidden-xs">
+            Cumulative GPA: 3.9 – Magna Cum Laude
+          </li>
+          <li class="hidden-lg hidden-md">
+            University of Delaware Scholars Scholarship Recipient
+          </li>
+          <li class="one-liner hidden-sm hidden-xs">
+            University of Delaware Scholars Scholarship Recipient
+          </li>
+          <li class="hidden-lg hidden-md">
+            Alpha Lambda Delta Honors Society Member
+          </li>
+          <li class="one-liner hidden-sm hidden-xs">
+            Alpha Lambda Delta Honors Society Member
+          </li>
+        </ul>
+        <br />
+        <i id="courses-label">Selected Coursework:</i>
+        <br />
         <div class="row">
-            <span class="no-padding">
-                <b>University of Delaware – Class&nbsp;of&nbsp;2018</b>
-            </span>
-            <br>
-            <span id="education-major">Bachelor of Science in Computer Information Systems</span>
-        </div>
-        <div *ngIf="educationMoreDetails" class="row more-info-row" [@slideIn]="'in'">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
-                <ul class="more-info-list">
-                    <li class="one-liner">Cumulative GPA: 3.9 – Magna Cum Laude</li>
-                    <li class="hidden-lg hidden-md">University of Delaware Scholars Scholarship Recipient</li>
-                    <li class="one-liner hidden-sm hidden-xs">University of Delaware Scholars Scholarship Recipient</li>
-                    <li class="hidden-lg hidden-md">Alpha Lambda Delta Honors Society Member</li>
-                    <li class="one-liner hidden-sm hidden-xs">Alpha Lambda Delta Honors Society Member</li>
-                </ul>
-                <br>
-                <i id="courses-label">Selected Coursework:</i>
-                <br>
-                <div class="row">
-                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 no-padding">
-                        <div class="courses-header">Computer&nbsp;Science</div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 courses-content no-padding">
-                            <ul>
-                                <li>Algorithms</li>
-                                <li>Artificial&nbsp;Intelligence</li>
-                                <li>Assembly&nbsp;Language</li>
-                                <li>Cloud&nbsp;Cryptography</li>
-                                <li>Data&nbsp;Structures</li>
-                                <li>Database&nbsp;Systems</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 courses-content no-padding">
-                            <ul>
-                                <li>Machine&nbsp;Learning</li>
-                                <li>Network&nbsp;Fundamentals</li>
-                                <li>Parallel&nbsp;Computing</li>
-                                <li>Secure&nbsp;Software&nbsp;Design</li>
-                                <li>Web&nbsp;Technologies</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 no-padding">
-                        <div class="courses-header">Business</div>
-                        <div class="visible-lg-block col-lg-12 courses-content no-padding">
-                            <ul>
-                                <li>Accounting</li>
-                                <li>Business Administration</li>
-                                <li>Business&nbsp;Operations</li>
-                                <li>Finance</li>
-                                <li>Marketing</li>
-                                <li>Statistics</li>
-                            </ul>
-                        </div>
-                        <div class="hidden-lg col-md-6 col-sm-6 col-xs-12 courses-content no-padding">
-                            <ul>
-                                <li>Accounting</li>
-                                <li>Business Administration</li>
-                                <li>Business&nbsp;Operations</li>
-                            </ul>
-                        </div>
-                        <div class="hidden-lg col-md-6 col-sm-6 col-xs-12 courses-content no-padding">
-                            <ul>
-                                <li>Finance</li>
-                                <li>Marketing</li>
-                                <li>Statistics</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+          <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 no-padding">
+            <div class="courses-header">Computer&nbsp;Science</div>
+            <div
+              class="col-lg-6 col-md-6 col-sm-6 col-xs-12 courses-content no-padding"
+            >
+              <ul>
+                <li>Algorithms</li>
+                <li>Artificial&nbsp;Intelligence</li>
+                <li>Assembly&nbsp;Language</li>
+                <li>Cloud&nbsp;Cryptography</li>
+                <li>Data&nbsp;Structures</li>
+                <li>Database&nbsp;Systems</li>
+              </ul>
             </div>
+            <div
+              class="col-lg-6 col-md-6 col-sm-6 col-xs-12 courses-content no-padding"
+            >
+              <ul>
+                <li>Machine&nbsp;Learning</li>
+                <li>Network&nbsp;Fundamentals</li>
+                <li>Parallel&nbsp;Computing</li>
+                <li>Secure&nbsp;Software&nbsp;Design</li>
+                <li>Web&nbsp;Technologies</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 no-padding">
+            <div class="courses-header">Business</div>
+            <div class="visible-lg-block col-lg-12 courses-content no-padding">
+              <ul>
+                <li>Accounting</li>
+                <li>Business Administration</li>
+                <li>Business&nbsp;Operations</li>
+                <li>Finance</li>
+                <li>Marketing</li>
+                <li>Statistics</li>
+              </ul>
+            </div>
+            <div
+              class="hidden-lg col-md-6 col-sm-6 col-xs-12 courses-content no-padding"
+            >
+              <ul>
+                <li>Accounting</li>
+                <li>Business Administration</li>
+                <li>Business&nbsp;Operations</li>
+              </ul>
+            </div>
+            <div
+              class="hidden-lg col-md-6 col-sm-6 col-xs-12 courses-content no-padding"
+            >
+              <ul>
+                <li>Finance</li>
+                <li>Marketing</li>
+                <li>Statistics</li>
+              </ul>
+            </div>
+          </div>
         </div>
-
+      </div>
     </div>
-    <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs more-info-col">
-        <button class="more-info-button" (click)="educationClick()">
-            <span class="more-button-text">More&nbsp;Details</span>
-            <span *ngIf="!educationMoreDetails" class="material-icons more-button-icon">arrow_drop_down</span>
-            <span *ngIf="educationMoreDetails" class="material-icons more-button-icon">arrow_drop_up</span>
-        </button>
-    </div>
+  </div>
+  <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs more-info-col">
+    <button class="more-info-button" (click)="educationClick()">
+      <span class="more-button-text">More&nbsp;Details</span>
+      <span
+        *ngIf="!educationMoreDetails"
+        class="material-icons more-button-icon"
+        >arrow_drop_down</span
+      >
+      <span *ngIf="educationMoreDetails" class="material-icons more-button-icon"
+        >arrow_drop_up</span
+      >
+    </button>
+  </div>
 </div>
 <div class="row section">
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 section-title">
-        Experience
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 section-title">
+    Experience
+  </div>
+  <div class="col-xs-6 visible-xs-block">
+    <button class="more-info-button" (click)="experienceClick()">
+      <span class="more-button-text">More Details</span>
+      <span
+        *ngIf="!experienceMoreDetails"
+        class="material-icons more-button-icon"
+        >arrow_drop_down</span
+      >
+      <span
+        *ngIf="experienceMoreDetails"
+        class="material-icons more-button-icon"
+        >arrow_drop_up</span
+      >
+    </button>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
+    <div class="row">
+      <div
+        class="col-lg-8 col-md-8 col-sm-12 col-xs-12"
+        [ngClass]="{ 'margin-bottom': !experienceMoreDetails }"
+      >
+        <b>JPMorgan Chase & Co.</b>
+        <br />
+        <span>Software Engineer</span>
+        <div class="visible-sm-block visible-xs-block experience-date">
+          July 2018 - Present
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 hidden-sm hidden-xs experience-date">
+        July 2018 - Present
+      </div>
     </div>
-    <div class="col-xs-6 visible-xs-block">
-        <button class="more-info-button" (click)="experienceClick()">
-            <span class="more-button-text">More Details</span>
-            <span *ngIf="!experienceMoreDetails" class="material-icons more-button-icon">arrow_drop_down</span>
-            <span *ngIf="experienceMoreDetails" class="material-icons more-button-icon">arrow_drop_up</span>
-        </button>
+    <div
+      *ngIf="experienceMoreDetails"
+      class="row experience-row"
+      [@slideIn]="'in'"
+    >
+      <div class="col-lg-12 col-md-12-col-sm-12 col-xs-12 no-padding">
+        <div class="experience-project">
+          <div class="experience-detail-header">
+            Home Lending Ecosystem Developer
+          </div>
+          <ul class="more-info-list">
+            <li class="hidden-lg">
+              Member of a T-Shaped Agile team in the Home Lending ecosystem
+            </li>
+            <li class="one-liner hidden-md hidden-sm hidden-xs">
+              Member of a T-Shaped Agile team in the Home Lending ecosystem
+            </li>
+            <li class="hidden-lg">
+              Lead developer on an automated database optimization initiative
+              utilizing shell scripts to clean up & archive old loan data in
+              order to lower storage costs
+            </li>
+            <li class="one-liner hidden-md hidden-sm hidden-xs">
+              Lead developer on an automated database optimization initiative
+              utilizing shell scripts <br />to clean up & archive old loan data
+              in order to lower storage costs
+            </li>
+            <li class="hidden-lg">
+              Developed new features & maintained a React.js application that is
+              used for tracking requests & approvals of mortgage pricing changes
+              during origination
+            </li>
+            <li class="one-liner hidden-md hidden-sm hidden-xs">
+              Developed new features & maintained a React.js application that is
+              used for tracking requests <br />& approvals of mortgage pricing
+              changes during origination
+            </li>
+            <li class="hidden-lg">
+              Wrote automated tests using Selenium in Java for a web application
+              used by mortgage bankers during the borrower application process
+            </li>
+            <li class="one-liner hidden-md hidden-sm hidden-xs">
+              Wrote automated tests using Selenium in Java for a web application
+              used by mortgage bankers <br />during the borrower application
+              process
+            </li>
+            <li class="hidden-lg">
+              Updated & maintained a loan prioritization system in an OOL called
+              Progress
+            </li>
+            <li class="one-liner hidden-md hidden-sm hidden-xs">
+              Updated & maintained a loan prioritization system in an OOL called
+              Progress
+            </li>
+            <li class="hidden-lg">
+              Supported & developed implementation plans for production releases
+            </li>
+            <li class="one-liner hidden-md hidden-sm hidden-xs">
+              Supported & developed implementation plans for production releases
+            </li>
+            <li class="hidden-lg">
+              Wrote & groomed stories, partook in code reviews, & helped in
+              sprint planning
+            </li>
+            <li class="one-liner hidden-md hidden-sm hidden-xs">
+              Wrote & groomed stories, partook in code reviews, & helped in
+              sprint planning
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
-        <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" [ngClass]="{'margin-bottom': !experienceMoreDetails }">
-                <b>JPMorgan Chase & Co.</b>
-                <br>
-                <span>Software Engineer</span>
-                <div class="visible-sm-block visible-xs-block experience-date">
-                    July 2018 - Present
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs experience-date">
-                July 2018 - Present
-            </div>
+    <div class="row">
+      <div
+        class="col-lg-8 col-md-8 col-sm-12 col-xs-12"
+        [ngClass]="{ 'margin-bottom': !experienceMoreDetails }"
+      >
+        <b>JPMorgan Chase & Co.</b>
+        <br />
+        <span>Technology Analyst Intern</span>
+        <div class="visible-sm-block visible-xs-block experience-date">
+          June 2017 - May 2018
         </div>
-        <div *ngIf="experienceMoreDetails" class="row experience-row" [@slideIn]="'in'">
-            <div class="col-lg-12 col-md-12-col-sm-12 col-xs-12 no-padding">
-                <div class="experience-project">
-                    <div class="experience-detail-header">
-                        Home Lending Ecosystem Developer
-                    </div>
-                    <ul class="more-info-list">
-                        <li class="hidden-lg">Member of a T-Shaped Agile team in the Home Lending ecosystem</li>                        
-                        <li class="one-liner hidden-md hidden-sm hidden-xs">Member of a T-Shaped Agile team in the Home Lending ecosystem</li>
-                        <li>Developed features to meet new business requirements for updates to Home Lending 
-                            applications using Progress OpenEdge
-                        </li>
-                        <li class="hidden-lg">Performed QA testing on code written to ensure all requirements are met</li>                        
-                        <li class="one-liner hidden-md hidden-sm hidden-xs">Performed QA testing on code written to ensure all requirements are met</li>
-                        <li class="hidden-lg">Wrote & groomed stories, partook in code reviews, & helped in sprint planning</li>                        
-                        <li class="one-liner hidden-md hidden-sm hidden-xs">Wrote & groomed stories, partook in code reviews, & helped in sprint planning</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" [ngClass]="{'margin-bottom': !experienceMoreDetails }">
-                <b>JPMorgan Chase & Co.</b>
-                <br>
-                <span>Technology Analyst Intern</span>
-                <div class="visible-sm-block visible-xs-block experience-date">
-                    June 2017 - May 2018
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs experience-date">
-                June 2017 - May 2018
-            </div>
-        </div>
-        <div *ngIf="experienceMoreDetails" class="row experience-row" [@slideIn]="'in'">
-            <div class="col-lg-12 col-md-12-col-sm-12 col-xs-12 no-padding">
-                <div class="experience-project">
-                    <div class="experience-detail-header">
-                        Full Stack Web Portal
-                    </div>
-                    <ul class="more-info-list">
-                        <li class="hidden-lg">Created a full stack, cloud based web portal for updates on future project information</li>
-                        <li class="one-liner hidden-md hidden-sm hidden-xs">Created a full stack, cloud based web portal for updates on future project information</li>
-                        <li>Implemented a self-service paradigm, allowing for role-based access to CRUD functionality of website
-                            content
-                        </li>
-                    </ul>
-                    <div class="row no-margin technology-wrapper">
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                            Front End
-                        </div>
-                        <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                            <span class="technology-tag">HTML</span>
-                            <span class="technology-tag">CSS</span>
-                            <span class="technology-tag">Javascript</span>
-                            <span class="technology-tag">jQuery</span>
-                            <span class="technology-tag">Bootstrap</span>
-                        </div>
-                    </div>
-                    <div class="row no-margin technology-wrapper">
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                            Back End
-                        </div>
-                        <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                            <span class="technology-tag">Java</span>
-                            <span class="technology-tag">Spring&nbsp;Boot</span>
-                            <span class="technology-tag">Spring&nbsp;MVC</span>
-                            <span class="technology-tag">HTTP</span>
-                            <span class="technology-tag">JPA</span>
-                            <span class="technology-tag">Oracle</span>
-                            <span class="technology-tag">Cloud&nbsp;Foundry</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-project">
-                    <div class="experience-detail-header">
-                        Support Agent Status Widget
-                    </div>
-                    <ul class="more-info-list">
-                        <li class="hidden-lg">Worked in an 8-person scrum team with 3 week sprints following Agile/Scrum methodologies</li>
-                        <li class="one-liner hidden-md hidden-sm hidden-xs">Worked in an 8-person scrum team with 3 week sprints following Agile/Scrum methodologies</li>
-                        <li>Developed cloud based RESTful web micro-service leveraging a Kafka event stream for communication
-                            between the client & server
-                        </li>
-                    </ul>
-                    <div class="row no-margin technology-wrapper">
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                            Front End
-                        </div>
-                        <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                            <span class="technology-tag">Angular</span>
-                            <span class="technology-tag">HTML</span>
-                            <span class="technology-tag">CSS</span>
-                            <span class="technology-tag">Typescript</span>
-                            <span class="technology-tag">Bootstrap</span>
-                        </div>
-                    </div>
-                    <div class="row no-margin technology-wrapper">
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                            Back End
-                        </div>
-                        <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                            <span class="technology-tag">Java</span>
-                            <span class="technology-tag">Kafka</span>
-                            <span class="technology-tag">Spring&nbsp;Boot</span>
-                            <span class="technology-tag">HTTP</span>
-                            <span class="technology-tag">JAX&nbsp;RS&nbsp;Jersey</span>
-                            <span class="technology-tag">JPA</span>
-                            <span class="technology-tag">Oracle</span>
-                            <span class="technology-tag">Cloud&nbsp;Foundry</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 experience-content">
-                <b>GBG, The Corporate Gift Source, Inc.</b>
-                <br>
-                <span>Sales & Marketing Associate</span>
-                <div class="visible-sm-block visible-xs-block experience-date">
-                    June 2014 - Aug 2016
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs experience-date">
-                June 2014 - Aug 2016
-            </div>
-        </div>
-        <div *ngIf="experienceMoreDetails" class="row experience-row" [@slideIn]="'in'">
-            <div class="col-lg-12 col-md-12-col-sm-12 col-xs-12 no-padding">
-                <ul class="more-info-list">
-                    <li>Created an online company catalog-webstore to increase efficiency of orders by eliminating manual processing
-                        of the transactions</li>
-                    <li class="hidden-lg">Processed purchase and sales orders of products for corporations across the country</li>
-                    <li class="one-liner hidden-md hidden-sm hidden-xs">Processed purchase and sales orders of products for corporations across the country</li>
-                    <li class="hidden-lg">Actively communicated with customers to ensure complete customer satisfaction</li>
-                    <li class="one-liner hidden-md hidden-sm hidden-xs">Actively communicated with customers to ensure complete customer satisfaction</li>
-                </ul>
-            </div>
-        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 hidden-sm hidden-xs experience-date">
+        June 2017 - May 2018
+      </div>
     </div>
-    <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs more-info-col">
-        <button class="more-info-button" (click)="experienceClick()">
-            <span class="more-button-text">More&nbsp;Details</span>
-            <span *ngIf="!experienceMoreDetails" class="material-icons more-button-icon">arrow_drop_down</span>
-            <span *ngIf="experienceMoreDetails" class="material-icons more-button-icon">arrow_drop_up</span>
-        </button>
+    <div
+      *ngIf="experienceMoreDetails"
+      class="row experience-row"
+      [@slideIn]="'in'"
+    >
+      <div class="col-lg-12 col-md-12-col-sm-12 col-xs-12 no-padding">
+        <div class="experience-project">
+          <div class="experience-detail-header">
+            Full Stack Web Portal
+          </div>
+          <ul class="more-info-list">
+            <li class="hidden-lg">
+              Created a full stack, cloud based web portal for updates on future
+              project information
+            </li>
+            <li class="one-liner hidden-md hidden-sm hidden-xs">
+              Created a full stack, cloud based web portal for updates on future
+              project information
+            </li>
+            <li class="hidden-lg">
+              Implemented a self-service paradigm, allowing for role-based
+              access to CRUD functionality of website content
+            </li>
+            <li class="one-liner hidden-md hidden-sm hidden-xs">
+              Implemented a self-service paradigm, allowing for role-based
+              access to CRUD <br />functionality of website content
+            </li>
+          </ul>
+          <div class="row no-margin technology-wrapper">
+            <div
+              class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header"
+            >
+              Front End
+            </div>
+            <div
+              class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+            >
+              <span class="technology-tag">HTML</span>
+              <span class="technology-tag">CSS</span>
+              <span class="technology-tag">Javascript</span>
+              <span class="technology-tag">jQuery</span>
+              <span class="technology-tag">Bootstrap</span>
+            </div>
+          </div>
+          <div class="row no-margin technology-wrapper">
+            <div
+              class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header"
+            >
+              Back End
+            </div>
+            <div
+              class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+            >
+              <span class="technology-tag">Java</span>
+              <span class="technology-tag">Spring&nbsp;Boot</span>
+              <span class="technology-tag">Spring&nbsp;MVC</span>
+              <span class="technology-tag">HTTP</span>
+              <span class="technology-tag">JPA</span>
+              <span class="technology-tag">Oracle</span>
+              <span class="technology-tag">Cloud&nbsp;Foundry</span>
+            </div>
+          </div>
+        </div>
+        <div class="experience-project">
+          <div class="experience-detail-header">
+            Support Agent Status Widget
+          </div>
+          <ul class="more-info-list">
+            <li class="hidden-lg">
+              Worked in an 8-person scrum team with 3 week sprints following
+              Agile/Scrum methodologies
+            </li>
+            <li class="one-liner hidden-md hidden-sm hidden-xs">
+              Worked in an 8-person scrum team with 3 week sprints following
+              Agile/Scrum methodologies
+            </li>
+            <li class="hidden-lg">
+              Developed cloud based RESTful web micro-service leveraging a Kafka
+              event stream for communication between the client & server
+            </li>
+            <li class="one-liner hidden-md hidden-sm hidden-xs">
+              Developed cloud based RESTful web micro-service leveraging a Kafka
+              event stream for <br />communication between the client & server
+            </li>
+          </ul>
+          <div class="row no-margin technology-wrapper">
+            <div
+              class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header"
+            >
+              Front End
+            </div>
+            <div
+              class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+            >
+              <span class="technology-tag">Angular</span>
+              <span class="technology-tag">HTML</span>
+              <span class="technology-tag">CSS</span>
+              <span class="technology-tag">Typescript</span>
+              <span class="technology-tag">Bootstrap</span>
+            </div>
+          </div>
+          <div class="row no-margin technology-wrapper">
+            <div
+              class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header"
+            >
+              Back End
+            </div>
+            <div
+              class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+            >
+              <span class="technology-tag">Java</span>
+              <span class="technology-tag">Kafka</span>
+              <span class="technology-tag">Spring&nbsp;Boot</span>
+              <span class="technology-tag">HTTP</span>
+              <span class="technology-tag">JAX&nbsp;RS&nbsp;Jersey</span>
+              <span class="technology-tag">JPA</span>
+              <span class="technology-tag">Oracle</span>
+              <span class="technology-tag">Cloud&nbsp;Foundry</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 experience-content">
+        <b>GBG, The Corporate Gift Source, Inc.</b>
+        <br />
+        <span>Sales & Marketing Associate</span>
+        <div class="visible-sm-block visible-xs-block experience-date">
+          June 2014 - Aug 2016
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 hidden-sm hidden-xs experience-date">
+        June 2014 - Aug 2016
+      </div>
+    </div>
+    <div
+      *ngIf="experienceMoreDetails"
+      class="row experience-row"
+      [@slideIn]="'in'"
+    >
+      <div class="col-lg-12 col-md-12-col-sm-12 col-xs-12 no-padding">
+        <ul class="more-info-list">
+          <li class="hidden-lg">
+            Created an online company catalog-webstore to increase efficiency of
+            orders by eliminating manual processing of the transactions
+          </li>
+          <li class="one-liner hidden-md hidden-sm hidden-xs">
+            Created an online company catalog-webstore to increase efficiency of
+            orders by eliminating <br />manual processing of the transactions
+          </li>
+          <li class="hidden-lg">
+            Processed purchase and sales orders of products for corporations
+            across the country
+          </li>
+          <li class="one-liner hidden-md hidden-sm hidden-xs">
+            Processed purchase and sales orders of products for corporations
+            across the country
+          </li>
+          <li class="hidden-lg">
+            Actively communicated with customers to ensure complete customer
+            satisfaction
+          </li>
+          <li class="one-liner hidden-md hidden-sm hidden-xs">
+            Actively communicated with customers to ensure complete customer
+            satisfaction
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs more-info-col">
+    <button class="more-info-button" (click)="experienceClick()">
+      <span class="more-button-text">More&nbsp;Details</span>
+      <span
+        *ngIf="!experienceMoreDetails"
+        class="material-icons more-button-icon"
+        >arrow_drop_down</span
+      >
+      <span
+        *ngIf="experienceMoreDetails"
+        class="material-icons more-button-icon"
+        >arrow_drop_up</span
+      >
+    </button>
+  </div>
 </div>
 
 <div class="row section">
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
-        Projects
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-title">
+    Projects
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
+    <div class="row project">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <img class="project-image" src="/assets/react-native.jpeg" />
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="project-header">
+          Exchange
+        </div>
+        <div class="project-description">
+          Cross platform mobile cloud application built using React Native and
+          Firebase. The app allows users to create an electronic business card
+          and connect with others using Near Field Communication.
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+          Front End
+        </div>
+        <div
+          class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+        >
+          <span class="technology-tag">React Native</span>
+          <span class="technology-tag">Javascript</span>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+          Back End
+        </div>
+        <div
+          class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+        >
+          <span class="technology-tag">Firebase</span>
+          <span class="technology-tag">HTTP</span>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 section-content">
-        <div class="row project">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <img class="project-image" src="/assets/react-native.jpeg">
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="project-header">
-                    Exchange
-                </div>
-                <div class="project-description">
-                    Cross platform mobile cloud application built using React Native and Firebase. The app allows users to create an
-                    electronic business card and connect with others using Near Field Communication.
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                    Front End
-                </div>
-                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                    <span class="technology-tag">React Native</span>
-                    <span class="technology-tag">Javascript</span>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                    Back End
-                </div>
-                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                    <span class="technology-tag">Firebase</span>
-                    <span class="technology-tag">HTTP</span>
-                </div>
-            </div>
+    <div class="row project">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <img class="project-image" src="/assets/crypto.jpg" />
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="project-header">
+          Local Coin
         </div>
-        <div class="row project">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <img class="project-image" src="/assets/crypto.jpg">
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="project-header">
-                    Local Coin
-                </div>
-                <div class="project-description">
-                    Cryptocurrency proof of concept developed for one of my college professors.
-                    Built core blockchain using C++, transaction server using NodeJS + ExpressJS, & an Ionic mobile app for conducting transactions.
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                    Front End
-                </div>
-                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                    <span class="technology-tag">Ionic</span>
-                    <span class="technology-tag">Angular</span>
-                    <span class="technology-tag">HTML</span>
-                    <span class="technology-tag">SCSS</span>
-                    <span class="technology-tag">Typescript</span>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                    Back End
-                </div>
-                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                    <span class="technology-tag">C++</span>
-                    <span class="technology-tag">NodeJS</span>
-                    <span class="technology-tag">ExpressJS</span>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
-                <a class="github-link" href="https://github.com/Jordsan/LocalCoin-Core" target="_blank">
-                    View&nbsp;Source&nbsp;(Core)
-                </a>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
-                <a class="github-link" href="https://github.com/Jordsan/LocalCoin-Server" target="_blank">
-                    View&nbsp;Source&nbsp;(Transaction&nbsp;Server)
-                </a>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
-                <a class="github-link" href="https://github.com/Jordsan/LocalCoin-Mobile" target="_blank">
-                    View&nbsp;Source&nbsp;(Mobile&nbsp;App)
-                </a>
-            </div>
+        <div class="project-description">
+          Cryptocurrency proof of concept developed for one of my college
+          professors. Built core blockchain using C++, transaction server using
+          NodeJS + ExpressJS, & an Ionic mobile app for conducting transactions.
         </div>
-        <div class="row project">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <img class="project-image" src="/assets/angular-firebase.png">
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="project-header">
-                    Personal Portfolio Website
-                </div>
-                <div class="project-description">
-                    This website portrays my background, skills, and personal projects. It was developed using Angular and Bootstrap, and is
-                    hosted on Firebase.
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                    Front End
-                </div>
-                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                    <span class="technology-tag">Angular</span>
-                    <span class="technology-tag">HTML</span>
-                    <span class="technology-tag">CSS</span>
-                    <span class="technology-tag">Typescript</span>
-                    <span class="technology-tag">Bootstrap</span>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                    Back End
-                </div>
-                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                    <span class="technology-tag">Firebase</span>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
-                <a class="github-link" href="https://github.com/Jordsan/PortfolioWebApp" target="_blank">
-                    View Source
-                </a>
-            </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+          Front End
         </div>
-        <div class="row project">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <img class="project-image" src="/assets/ionic.svg">
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="project-header">
-                    Restaurant Roulette
-                </div>
-                <div class="project-description">
-                    Cross platform mobile cloud application built using Ionic, Angular, and Firebase. The app recommends nearby restaurants based
-                    on inputted user preferences.
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                    Front End
-                </div>
-                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                    <span class="technology-tag">Ionic</span>
-                    <span class="technology-tag">Angular</span>
-                    <span class="technology-tag">HTML</span>
-                    <span class="technology-tag">SCSS</span>
-                    <span class="technology-tag">Typescript</span>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                    Back End
-                </div>
-                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                    <span class="technology-tag">Firebase</span>
-                    <span class="technology-tag">HTTP</span>
-                    <span class="technology-tag">Google&nbsp;Places&nbsp;API</span>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
-                <a class="github-link" href="https://github.com/Jordsan/restaurant-roulette" target="_blank">
-                    View Source
-                </a>
-            </div>
+        <div
+          class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+        >
+          <span class="technology-tag">Ionic</span>
+          <span class="technology-tag">Angular</span>
+          <span class="technology-tag">HTML</span>
+          <span class="technology-tag">SCSS</span>
+          <span class="technology-tag">Typescript</span>
         </div>
-        <div class="row project">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <img class="project-image" src="/assets/meanstack.jpg">
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="project-header">
-                    Shared Event Planner Calendar
-                </div>
-                <div class="project-description">
-                    Calendar-view web application for planning shared events between users. Built using MongoDB, Express.js, Angular, and Node.js.
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                    Front End
-                </div>
-                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                    <span class="technology-tag">Angular</span>
-                    <span class="technology-tag">HTML</span>
-                    <span class="technology-tag">CSS</span>
-                    <span class="technology-tag">Typescript</span>
-                    <span class="technology-tag">Bootstrap</span>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
-                    Back End
-                </div>
-                <div class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding">
-                    <span class="technology-tag">MongoDB</span>
-                    <span class="technology-tag">Mongoose</span>
-                    <span class="technology-tag">Express.js</span>
-                    <span class="technology-tag">Node.js</span>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
-                <a class="github-link" href="https://github.com/Jordsan/cisc474-mean-calendar-UI" target="_blank">
-                    View&nbsp;Source&nbsp;(Front&nbsp;End)
-                </a>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
-                <a class="github-link" href="https://github.com/Jordsan/cisc474-mean-calendar" target="_blank">
-                    View&nbsp;Source&nbsp;(Back&nbsp;End)
-                </a>
-            </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+          Back End
         </div>
-        <div class="row project">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <img class="project-image" src="/assets/cpp.png">
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="project-header">
-                    Markovian Tweet Generator
-                </div>
-                <div class="project-description">
-                    Tweet generator that uses Markov Chains to create messages from a user's recent tweets. Built using C++ and retrieves data
-                    from the Twitter API.
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
-                <div class="technology-list no-padding">
-                    <span class="technology-tag">C++</span>
-                    <span class="technology-tag">HTTP</span>
-                    <span class="technology-tag">Twitter&nbsp;API</span>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
-                <a class="github-link" href="https://github.com/Jordsan/cpeg476-markovian-tweets" target="_blank">
-                    View Source
-                </a>
-            </div>
+        <div
+          class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+        >
+          <span class="technology-tag">C++</span>
+          <span class="technology-tag">NodeJS</span>
+          <span class="technology-tag">ExpressJS</span>
         </div>
-        <div class="row project">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <img class="project-image" src="/assets/python.png">
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="project-header">
-                    Cryptocurrency Market Cap Spreadsheet Generator
-                </div>
-                <div class="project-description">
-                    Python script that fetches data on the top cryptocurrencies by market cap, and outputs the data in an Excell spreadsheet.
-                    Data is retrieved from Coinmarketcap's public API.
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
-                <div class="technology-list no-padding">
-                    <span class="technology-tag">Python</span>
-                    <span class="technology-tag">HTTP</span>
-                    <span class="technology-tag">Coinmarketcap&nbsp;API</span>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
-                <a class="github-link" href="https://github.com/Jordsan/cryptocurrency-marketcap-spreadsheet" target="_blank">
-                    View Source
-                </a>
-            </div>
-        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+        <a
+          class="github-link"
+          href="https://github.com/Jordsan/LocalCoin-Core"
+          target="_blank"
+        >
+          View&nbsp;Source&nbsp;(Core)
+        </a>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+        <a
+          class="github-link"
+          href="https://github.com/Jordsan/LocalCoin-Server"
+          target="_blank"
+        >
+          View&nbsp;Source&nbsp;(Transaction&nbsp;Server)
+        </a>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+        <a
+          class="github-link"
+          href="https://github.com/Jordsan/LocalCoin-Mobile"
+          target="_blank"
+        >
+          View&nbsp;Source&nbsp;(Mobile&nbsp;App)
+        </a>
+      </div>
     </div>
+    <div class="row project">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <img class="project-image" src="/assets/angular-firebase.png" />
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="project-header">
+          Personal Portfolio Website
+        </div>
+        <div class="project-description">
+          This website portrays my background, skills, and personal projects. It
+          was developed using Angular and Bootstrap, and is hosted on Firebase.
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+          Front End
+        </div>
+        <div
+          class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+        >
+          <span class="technology-tag">Angular</span>
+          <span class="technology-tag">HTML</span>
+          <span class="technology-tag">CSS</span>
+          <span class="technology-tag">Typescript</span>
+          <span class="technology-tag">Bootstrap</span>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+          Back End
+        </div>
+        <div
+          class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+        >
+          <span class="technology-tag">Firebase</span>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+        <a
+          class="github-link"
+          href="https://github.com/Jordsan/PortfolioWebApp"
+          target="_blank"
+        >
+          View Source
+        </a>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <img class="project-image" src="/assets/ionic.svg" />
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="project-header">
+          Restaurant Roulette
+        </div>
+        <div class="project-description">
+          Cross platform mobile cloud application built using Ionic, Angular,
+          and Firebase. The app recommends nearby restaurants based on inputted
+          user preferences.
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+          Front End
+        </div>
+        <div
+          class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+        >
+          <span class="technology-tag">Ionic</span>
+          <span class="technology-tag">Angular</span>
+          <span class="technology-tag">HTML</span>
+          <span class="technology-tag">SCSS</span>
+          <span class="technology-tag">Typescript</span>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+          Back End
+        </div>
+        <div
+          class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+        >
+          <span class="technology-tag">Firebase</span>
+          <span class="technology-tag">HTTP</span>
+          <span class="technology-tag">Google&nbsp;Places&nbsp;API</span>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+        <a
+          class="github-link"
+          href="https://github.com/Jordsan/restaurant-roulette"
+          target="_blank"
+        >
+          View Source
+        </a>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <img class="project-image" src="/assets/meanstack.jpg" />
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="project-header">
+          Shared Event Planner Calendar
+        </div>
+        <div class="project-description">
+          Calendar-view web application for planning shared events between
+          users. Built using MongoDB, Express.js, Angular, and Node.js.
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+          Front End
+        </div>
+        <div
+          class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+        >
+          <span class="technology-tag">Angular</span>
+          <span class="technology-tag">HTML</span>
+          <span class="technology-tag">CSS</span>
+          <span class="technology-tag">Typescript</span>
+          <span class="technology-tag">Bootstrap</span>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 technology-header">
+          Back End
+        </div>
+        <div
+          class="technology-list col-lg-10 col-md-10 col-sm-12 col-xs-12 no-padding"
+        >
+          <span class="technology-tag">MongoDB</span>
+          <span class="technology-tag">Mongoose</span>
+          <span class="technology-tag">Express.js</span>
+          <span class="technology-tag">Node.js</span>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+        <a
+          class="github-link"
+          href="https://github.com/Jordsan/cisc474-mean-calendar-UI"
+          target="_blank"
+        >
+          View&nbsp;Source&nbsp;(Front&nbsp;End)
+        </a>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+        <a
+          class="github-link"
+          href="https://github.com/Jordsan/cisc474-mean-calendar"
+          target="_blank"
+        >
+          View&nbsp;Source&nbsp;(Back&nbsp;End)
+        </a>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <img class="project-image" src="/assets/cpp.png" />
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="project-header">
+          Markovian Tweet Generator
+        </div>
+        <div class="project-description">
+          Tweet generator that uses Markov Chains to create messages from a
+          user's recent tweets. Built using C++ and retrieves data from the
+          Twitter API.
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+        <div class="technology-list no-padding">
+          <span class="technology-tag">C++</span>
+          <span class="technology-tag">HTTP</span>
+          <span class="technology-tag">Twitter&nbsp;API</span>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+        <a
+          class="github-link"
+          href="https://github.com/Jordsan/cpeg476-markovian-tweets"
+          target="_blank"
+        >
+          View Source
+        </a>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <img class="project-image" src="/assets/python.png" />
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="project-header">
+          Cryptocurrency Market Cap Spreadsheet Generator
+        </div>
+        <div class="project-description">
+          Python script that fetches data on the top cryptocurrencies by market
+          cap, and outputs the data in an Excell spreadsheet. Data is retrieved
+          from Coinmarketcap's public API.
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 technology-wrapper">
+        <div class="technology-list no-padding">
+          <span class="technology-tag">Python</span>
+          <span class="technology-tag">HTTP</span>
+          <span class="technology-tag">Coinmarketcap&nbsp;API</span>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top">
+        <a
+          class="github-link"
+          href="https://github.com/Jordsan/cryptocurrency-marketcap-spreadsheet"
+          target="_blank"
+        >
+          View Source
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
